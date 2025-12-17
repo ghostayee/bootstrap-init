@@ -9,3 +9,9 @@
 ==> containers - <div></div> which have ready made classes already styled.
 1. container --class fixed width
 2. container --fluid occupy whole
+==> text  utilities.
+==> text always start with text-...
+
+==> margin and padding property.
+==> start m margin end and margin start mx and my
+==>only m to do all the surrounding.
