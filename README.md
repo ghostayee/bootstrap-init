@@ -15,3 +15,7 @@
 ==> margin and padding property.
 ==> start m margin end and margin start mx and my
 ==>only m to do all the surrounding.
+==>row and col class are used together
+      ==>col are responsive by default.
+      ==>col must be used with row
+      ==>distribution is equal 12 grid system
