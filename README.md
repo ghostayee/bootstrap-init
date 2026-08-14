@@ -18,4 +18,4 @@
 ==>row and col class are used together
       ==>col are responsive by default.
       ==>col must be used with row
-      ==>distribution is equal 12 grid system
+      ==>distribution is equal 12 grid system 
