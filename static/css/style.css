@@ -144,11 +144,11 @@ body {
     cursor: pointer;
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
 .hero {
     position: relative;
     height: 100svh;
-    min-height: 720px;
+    min-height: 750px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -157,43 +157,46 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url("image.png") right center / cover no-repeat;
+    background: url("/static/image.png") right center / cover no-repeat;
     background-color: #050505;
 }
 
+/* Soft gradient from left (exactly like the screenshot) */
 .hero-bg::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg,
             #050505 0%,
-            #050505 26%,
-            rgba(5, 5, 5, 0.7) 45%,
-            rgba(5, 5, 5, 0.25) 65%,
+            #050505 30%,
+            rgba(5, 5, 5, 0.75) 48%,
+            rgba(5, 5, 5, 0.3) 65%,
             transparent 85%);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 520px;
-    padding-left: 80px;
+    max-width: 540px;
+    padding-left: 90px;
+    /* Adjust this for more/less space */
+    padding-right: 30px;
 }
 
 .eyebrow {
     font-size: 0.68rem;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.38em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 1.7rem;
+    margin-bottom: 1.8rem;
 }
 
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
-    font-size: clamp(2.7rem, 5.2vw, 3.75rem);
+    font-size: clamp(2.8rem, 5.5vw, 3.9rem);
     line-height: 1.05;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--ivory);
     margin: 0;
@@ -202,23 +205,23 @@ body {
 .hero h1 .gold {
     display: block;
     color: var(--gold);
-    margin-top: 0.06em;
+    margin-top: 0.08em;
 }
 
 .divider {
-    width: 70px;
+    width: 65px;
     height: 1px;
-    background: rgba(201, 162, 39, 0.75);
-    margin: 1.7rem 0 1.55rem;
+    background: rgba(201, 162, 39, 0.8);
+    margin: 1.8rem 0 1.6rem;
 }
 
 .tagline {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+    font-size: 1.3rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: rgba(244, 239, 230, 0.92);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.4rem;
 }
 
 .sub-tagline {
@@ -231,20 +234,24 @@ body {
 .hero-btns {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 2.8rem;
+    gap: 16px;
+    margin-top: 3rem;
+}
+
+.btn-gold,
+.btn-light {
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-gold {
     border: 1px solid var(--gold);
     color: var(--gold);
     background: transparent;
-    font-size: 0.68rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    padding: 13px 28px;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 .btn-gold:hover {
@@ -253,15 +260,9 @@ body {
 }
 
 .btn-light {
-    border: 1px solid rgba(244, 239, 230, 0.28);
+    border: 1px solid rgba(244, 239, 230, 0.3);
     color: var(--ivory);
     background: transparent;
-    font-size: 0.68rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    padding: 13px 28px;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 .btn-light:hover {
