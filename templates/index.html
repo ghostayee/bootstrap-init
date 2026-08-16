@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>home of collection</h1>
-</body>
-</html>
+{% extends "base.html" %} {% block title %}Champ & Champ Collection | Home{%
+endblock %} {% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Est. Nairobi</p>
+
+    <h1>
+      Champ &amp; Champ<br />
+      <span class="gold">Collection</span>
+    </h1>
+
+    <div class="divider"></div>
+
+    <p class="tagline">New Finds. Timeless Style.</p>
+    <p class="sub-tagline">Thrifted &amp; Brand New.</p>
+
+    <div class="hero-btns">
+      <a href="{{ url_for('new_arrivals') }}" class="btn-gold"
+        >Shop New Arrivals</a
+      >
+      <a href="{{ url_for('collections') }}" class="btn-light"
+        >Explore Collection</a
+      >
+    </div>
+  </div>
+</section>
+
+{% endblock %}
