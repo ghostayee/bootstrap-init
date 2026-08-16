@@ -36,8 +36,12 @@ body {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.72);
     padding: 9px 15px;
-    position: relative;
-    z-index: 110;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 /* ===== NAVBAR ===== */
@@ -48,13 +52,14 @@ body {
     right: 0;
     z-index: 100;
     padding: 16px 0;
+    transition: all 0.3s ease;
 }
 
 .main-nav.scrolled {
     background: rgba(5, 5, 5, 0.95);
     backdrop-filter: blur(10px);
     padding: 12px 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
