@@ -42,12 +42,19 @@ body {
 
 /* ===== NAVBAR ===== */
 .main-nav {
-    position: absolute;
+    position: fixed;
     top: 32px;
     left: 0;
     right: 0;
     z-index: 100;
     padding: 16px 0;
+}
+
+.main-nav.scrolled {
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -157,7 +164,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url("/static/image.png") right center / cover no-repeat;
+    background: url("/static/images/hero.jpg") right center / cover no-repeat;
     background-color: #050505;
 }
 
@@ -177,8 +184,8 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 540px;
-    padding-left: 90px;
+    max-width: 1500px;
+    padding-left: 200px;
     /* Adjust this for more/less space */
     padding-right: 30px;
 }
@@ -233,9 +240,18 @@ body {
 
 .hero-btns {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .btn-gold,
