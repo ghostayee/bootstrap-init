@@ -285,4 +285,745 @@ endblock %} {% block content %}
   </div>
 </section>
 
+<section class="champ-product-detail" id="champProductDetail">
+  <div class="champ-detail-container">
+    <!-- LEFT SIDE -->
+
+    <div class="champ-detail-gallery">
+      <div class="champ-detail-main">
+        <span class="champ-detail-badge" id="detailBadge"> BRAND NEW </span>
+
+        <img
+          id="detailImage"
+          src="images/champagne-slip-dress.jpg"
+          alt="Champagne Slip Dress"
+        />
+      </div>
+
+      <div class="champ-detail-thumbnails" id="detailThumbnails"></div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="champ-detail-content">
+      <span class="champ-detail-category" id="detailCategory"> DRESSES </span>
+
+      <h1 id="detailTitle">Champagne Slip Dress</h1>
+
+      <div class="champ-detail-price" id="detailPrice">KSh 8,500</div>
+
+      <div class="champ-detail-divider"></div>
+
+      <!-- SIZE -->
+
+      <div class="champ-detail-option">
+        <label>SIZE</label>
+
+        <div class="champ-sizes">
+          <button>XS</button>
+          <button class="selected">S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+      </div>
+
+      <!-- QUANTITY -->
+
+      <div class="champ-detail-option">
+        <label>QUANTITY</label>
+
+        <div class="champ-quantity">
+          <button id="detailMinus">−</button>
+
+          <span id="detailQuantity"> 1 </span>
+
+          <button id="detailPlus">+</button>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+
+      <div class="champ-detail-actions">
+        <button class="champ-detail-bag">ADD TO BAG</button>
+
+        <button class="champ-detail-buy">BUY NOW</button>
+
+        <button class="champ-detail-heart">♡</button>
+      </div>
+
+      <!-- DESCRIPTION -->
+
+      <div class="champ-detail-text">
+        <span>DESCRIPTION</span>
+
+        <p id="detailDescription">
+          A sophisticated champagne slip dress designed with an elegant evening
+          silhouette.
+        </p>
+      </div>
+
+      <div class="champ-detail-text">
+        <span>MATERIAL</span>
+
+        <p id="detailMaterial">
+          Premium satin finish with a smooth, fluid drape.
+        </p>
+      </div>
+
+      <div class="champ-detail-text">
+        <span>CONDITION</span>
+
+        <p id="detailCondition">Brand new.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOU MAY ALSO LIKE -->
+
+  <div class="champ-related">
+    <div class="champ-related-heading">
+      <span>STYLE TOGETHER</span>
+
+      <h2>YOU MAY ALSO LIKE</h2>
+
+      <div></div>
+    </div>
+
+    <div class="champ-related-grid" id="champRelatedGrid"></div>
+
+    <button class="champ-back-shop" id="backToChamp">BACK TO SHOP</button>
+  </div>
+</section>
+
+<!-- ================= NEW FINDS SECTION ================= -->
+<section class="new-finds">
+  <div class="container-fluid px-4 px-lg-5">
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="eyebrow">Just In</p>
+      <h2>New Finds</h2>
+      <p class="subtitle">
+        Discover pieces selected to make every look unforgettable.
+      </p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Product Cards - Horizontal Scroll -->
+    <div class="products-slider">
+      <!-- Product Card 1 -->
+      <div class="products-slider">
+
+    <!-- ================= FIRST SET ================= -->
+
+    <!-- Product Card 1 -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/dress1.jpg') }}"
+                alt="Champagne Slip Dress"
+            />
+
+            <div class="quick-add">
+                <button>Quick View</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Dresses</p>
+            <h5>Champagne Slip Dress</h5>
+            <p class="price">Ksh 8,500</p>
+            <div class="hero-btns">
+      <a href="{{ url_for('new_arrivals') }}" class="btn-gold"
+        >Add To Bag</a
+      >
+    </div>
+        </div>
+    </div>
+
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/blouse1.jpg') }}"
+                alt="Ivory Silk Blouse"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Tops</p>
+            <h5>Ivory Silk Blouse</h5>
+            <p class="price">Ksh 4,200</p>
+        </div>
+    </div>
+
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/pants1.jpg') }}"
+                alt="Onyx Wide-Leg Trouser"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Pants</p>
+            <h5>Onyx Wide-Leg Trouser</h5>
+            <p class="price">Ksh 6,400</p>
+        </div>
+    </div>
+
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/skirt1.jpg') }}"
+                alt="Gilded Pleated Skirt"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Skirts</p>
+            <h5>Gilded Pleated Skirt</h5>
+            <p class="price">Ksh 7,200</p>
+        </div>
+    </div>
+
+    <!-- Product Card 1 Duplicate -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/dress1.jpg') }}"
+                alt="Champagne Slip Dress"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Dresses</p>
+            <h5>Champagne Slip Dress</h5>
+            <p class="price">Ksh 8,500</p>
+        </div>
+    </div>
+
+
+    <!-- Product Card 2 Duplicate -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/blouse1.jpg') }}"
+                alt="Ivory Silk Blouse"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Tops</p>
+            <h5>Ivory Silk Blouse</h5>
+            <p class="price">Ksh 4,200</p>
+        </div>
+    </div>
+
+
+    <!-- Product Card 3 Duplicate -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/pants1.jpg') }}"
+                alt="Onyx Wide-Leg Trouser"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Pants</p>
+            <h5>Onyx Wide-Leg Trouser</h5>
+            <p class="price">Ksh 6,400</p>
+        </div>
+    </div>
+
+
+    <!-- Product Card 4 Duplicate -->
+    <div class="product-card">
+        <div class="product-img">
+            <span class="badge">Brand New</span>
+
+            <button class="wishlist">
+                <i class="bi bi-heart"></i>
+            </button>
+
+            <img
+                src="{{ url_for('static', filename='products/skirt1.jpg') }}"
+                alt="Gilded Pleated Skirt"
+            />
+
+            <div class="quick-add">
+                <button>Add to Bag</button>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p class="cat">Skirts</p>
+            <h5>Gilded Pleated Skirt</h5>
+            <p class="price">Ksh 7,200</p>
+        </div>
+    </div>
+</div>
+  </div>
+  <div class="text-center mt-5">
+    <a href="{{ url_for('new_arrivals') }}" class="btn-view-all">
+        View All New Arrivals →
+      </a>
+  </div>
+</section>
+
+<script>
+  const champProducts = {
+    champagne: {
+      badge: "BRAND NEW",
+
+      category: "DRESSES",
+
+      name: "Champagne Slip Dress",
+
+      price: "KSh 8,500",
+
+      images: [
+        "images/champagne-slip-dress.jpg",
+        "images/champagne-slip-dress-2.jpg",
+        "images/champagne-slip-dress-3.jpg",
+      ],
+
+      description:
+        "A sophisticated champagne slip dress designed with an elegant evening silhouette.",
+
+      material: "Premium satin finish with a smooth, fluid drape.",
+
+      condition: "Brand new.",
+    },
+
+    noir: {
+      badge: "THRIFTED",
+
+      category: "DRESSES",
+
+      name: "Noir Velvet Gown",
+
+      price: "KSh 14,500",
+
+      images: [
+        "images/noir-velvet-gown.jpg",
+        "images/noir-velvet-gown-2.jpg",
+        "images/noir-velvet-gown-3.jpg",
+      ],
+
+      description:
+        "A dramatic black velvet gown with an elegant evening silhouette.",
+
+      material: "Premium velvet with a soft luxurious finish.",
+
+      condition: "Thrifted.",
+    },
+
+    ivory: {
+      badge: "BRAND NEW",
+
+      category: "TOPS",
+
+      name: "Ivory Silk Blouse",
+
+      price: "KSh 4,200",
+
+      images: [
+        "images/ivory-silk-blouse.jpg",
+        "images/ivory-silk-blouse-2.jpg",
+        "images/ivory-silk-blouse-3.jpg",
+      ],
+
+      description: "An elegant ivory blouse designed for effortless luxury.",
+
+      material: "Premium silk.",
+
+      condition: "Brand new.",
+    },
+
+    camel: {
+      badge: "THRIFTED",
+
+      category: "COATS",
+
+      name: "Camel Tailored Coat",
+
+      price: "KSh 16,800",
+
+      images: [
+        "images/camel-tailored-coat.jpg",
+        "images/camel-tailored-coat-2.jpg",
+        "images/camel-tailored-coat-3.jpg",
+      ],
+
+      description:
+        "A beautifully structured camel coat with a timeless tailored silhouette.",
+
+      material: "Premium wool blend.",
+
+      condition: "Thrifted.",
+    },
+
+    gilded: {
+      badge: "BRAND NEW",
+
+      category: "SKIRTS",
+
+      name: "Gilded Pleated Skirt",
+
+      price: "KSh 7,200",
+
+      images: [
+        "images/gilded-pleated-skirt.jpg",
+        "images/gilded-pleated-skirt-2.jpg",
+        "images/gilded-pleated-skirt-3.jpg",
+      ],
+
+      description: "A statement pleated skirt with a refined metallic finish.",
+
+      material: "Premium pleated fabric.",
+
+      condition: "Brand new.",
+    },
+
+    sculpted: {
+      badge: "THRIFTED",
+
+      category: "JACKETS",
+
+      name: "Sculpted Black Blazer",
+
+      price: "KSh 11,200",
+
+      images: [
+        "images/sculpted-black-blazer.jpg",
+        "images/sculpted-black-blazer-2.jpg",
+        "images/sculpted-black-blazer-3.jpg",
+      ],
+
+      description:
+        "A structured black blazer designed with a sharp contemporary silhouette.",
+
+      material: "Premium tailored fabric.",
+
+      condition: "Thrifted.",
+    },
+
+    bronze: {
+      badge: "BRAND NEW",
+
+      category: "SETS",
+
+      name: "Bronze Two-Piece Set",
+
+      price: "KSh 12,400",
+
+      images: [
+        "images/bronze-two-piece-set.jpg",
+        "images/bronze-two-piece-set-2.jpg",
+        "images/bronze-two-piece-set-3.jpg",
+      ],
+
+      description:
+        "A luxurious bronze two-piece set designed for a sophisticated statement.",
+
+      material: "Premium structured fabric.",
+
+      condition: "Brand new.",
+    },
+  };
+  const detailSection = document.getElementById("champProductDetail");
+
+  const detailImage = document.getElementById("detailImage");
+
+  const detailBadge = document.getElementById("detailBadge");
+
+  const detailCategory = document.getElementById("detailCategory");
+
+  const detailTitle = document.getElementById("detailTitle");
+
+  const detailPrice = document.getElementById("detailPrice");
+
+  const detailDescription = document.getElementById("detailDescription");
+
+  const detailMaterial = document.getElementById("detailMaterial");
+
+  const detailCondition = document.getElementById("detailCondition");
+
+  const detailThumbnails = document.getElementById("detailThumbnails");
+
+  const relatedGrid = document.getElementById("champRelatedGrid");
+
+  /* =========================================
+   QUICK VIEW BUTTONS
+========================================= */
+
+  document.querySelectorAll(".champ-quick-view").forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const productId = this.dataset.product;
+
+      openChampProduct(productId);
+    });
+  });
+
+  /* =========================================
+   OPEN PRODUCT
+========================================= */
+
+  function openChampProduct(productId) {
+    const product = champProducts[productId];
+
+    if (!product) return;
+
+    /* BASIC INFORMATION */
+
+    detailBadge.textContent = product.badge;
+
+    detailCategory.textContent = product.category;
+
+    detailTitle.textContent = product.name;
+
+    detailPrice.textContent = product.price;
+
+    detailDescription.textContent = product.description;
+
+    detailMaterial.textContent = product.material;
+
+    detailCondition.textContent = product.condition;
+
+    /* MAIN IMAGE */
+
+    detailImage.src = product.images[0];
+
+    detailImage.alt = product.name;
+
+    /* THUMBNAILS */
+
+    detailThumbnails.innerHTML = "";
+
+    product.images.forEach((image, index) => {
+      const thumbnail = document.createElement("button");
+
+      thumbnail.className = "champ-detail-thumb";
+
+      thumbnail.type = "button";
+
+      if (index === 0) {
+        thumbnail.classList.add("active");
+      }
+
+      thumbnail.innerHTML = `
+            <img
+                src="${image}"
+                alt="${product.name}"
+            >
+        `;
+
+      thumbnail.addEventListener("click", () => {
+        detailImage.src = image;
+
+        document.querySelectorAll(".champ-detail-thumb").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        thumbnail.classList.add("active");
+      });
+
+      detailThumbnails.appendChild(thumbnail);
+    });
+
+    /* RELATED PRODUCTS */
+
+    createRelatedProducts(productId);
+
+    /* SHOW DETAIL */
+
+    detailSection.classList.add("active");
+
+    /* SCROLL TO DETAIL */
+
+    setTimeout(() => {
+      detailSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 80);
+  }
+
+  function createRelatedProducts(currentProduct) {
+    relatedGrid.innerHTML = "";
+
+    const related = Object.entries(champProducts)
+      .filter(([id]) => id !== currentProduct)
+      .slice(0, 3);
+
+    related.forEach(([id, product]) => {
+      const card = document.createElement("article");
+
+      card.className = "champ-related-card";
+
+      card.innerHTML = `
+
+            <div class="champ-related-image">
+
+                <img
+                    src="${product.images[0]}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+            <span class="champ-related-category">
+                ${product.category}
+            </span>
+
+            <h3>
+                ${product.name}
+            </h3>
+
+            <div class="champ-related-price">
+                ${product.price}
+            </div>
+
+            <button
+                class="champ-related-view"
+                type="button"
+            >
+                VIEW PRODUCT
+            </button>
+
+        `;
+
+      card
+        .querySelector(".champ-related-view")
+        .addEventListener("click", () => {
+          openChampProduct(id);
+        });
+
+      card
+        .querySelector(".champ-related-image")
+        .addEventListener("click", () => {
+          openChampProduct(id);
+        });
+
+      relatedGrid.appendChild(card);
+    });
+  }
+
+  document.getElementById("backToChamp").addEventListener("click", () => {
+    document.getElementById("champCollection").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+
+  /* =========================================
+   QUANTITY
+========================================= */
+
+  let detailQuantity = 1;
+
+  document.getElementById("detailPlus").addEventListener("click", () => {
+    detailQuantity++;
+
+    document.getElementById("detailQuantity").textContent = detailQuantity;
+  });
+
+  document.getElementById("detailMinus").addEventListener("click", () => {
+    if (detailQuantity > 1) {
+      detailQuantity--;
+    }
+
+    document.getElementById("detailQuantity").textContent = detailQuantity;
+  });
+
+  /* =========================================
+   SIZE SELECTION
+========================================= */
+
+  document.querySelectorAll(".champ-sizes button").forEach((button) => {
+    button.addEventListener("click", function () {
+      document.querySelectorAll(".champ-sizes button").forEach((item) => {
+        item.classList.remove("selected");
+      });
+
+      this.classList.add("selected");
+    });
+  });
+</script>
+
 {% endblock %}

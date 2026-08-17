@@ -852,3 +852,1523 @@ footer {
         inset: 4px;
     }
 }
+
+/* =========================================
+   THE CHAMP COLLECTION
+========================================= */
+
+.champ-collection {
+    background: #050505;
+    color: #fff;
+
+    padding: 55px 4vw 75px;
+
+    border-top: 1px solid rgba(201, 169, 95, 0.18);
+}
+
+
+/* HEADING */
+
+.champ-heading {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.champ-heading span {
+    display: block;
+
+    color: #c9a95f;
+
+    font-size: 0.48rem;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+}
+
+.champ-heading h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+
+    font-weight: 400;
+
+    letter-spacing: 0.16em;
+}
+
+.champ-heading-line {
+    width: 32px;
+
+    height: 1px;
+
+    background: #c9a95f;
+
+    margin: 12px auto 0;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.champ-products {
+    width: min(100%, 750px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px 12px;
+}
+
+
+/* =========================================
+   PRODUCT
+========================================= */
+
+.champ-product {
+    min-width: 0;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.champ-product-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 0.78;
+
+    overflow: hidden;
+
+    background: #020202;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.35s ease;
+}
+
+
+/* IMAGE POPS ON HOVER */
+
+.champ-product:hover .champ-product-image {
+    transform: translateY(-5px) scale(1.025);
+
+    border-color: rgba(201, 169, 95, 0.55);
+
+    z-index: 3;
+}
+
+.champ-product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+.champ-product:hover .champ-product-image img {
+    transform: scale(1.07);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.champ-badge {
+    position: absolute;
+
+    top: 7px;
+    left: 7px;
+
+    z-index: 5;
+
+    padding: 3px 6px;
+
+    color: #c9a95f;
+
+    border: 1px solid #c9a95f;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    font-size: 0.38rem;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.champ-wishlist {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    z-index: 5;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    border: 1px solid rgba(201, 169, 95, 0.65);
+
+    color: #c9a95f;
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   QUICK VIEW
+========================================= */
+
+.champ-quick-view {
+    position: absolute;
+
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+
+    z-index: 6;
+
+    height: 32px;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    border: 1px solid #c9a95f;
+
+    color: #c9a95f;
+
+    font-size: 0.43rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.champ-product:hover .champ-quick-view {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.champ-quick-view:hover {
+    background: #c9a95f;
+
+    color: #000;
+}
+
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.champ-product-info {
+    padding-top: 7px;
+}
+
+.champ-product-info>span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.39rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.champ-product-info h3 {
+    margin: 4px 0 3px;
+
+    color: #fff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 400;
+}
+
+.champ-product-info p {
+    margin: 0;
+
+    color: #c9a95f;
+
+    font-size: 0.48rem;
+}
+
+
+/* =========================================
+   ADD TO BAG
+========================================= */
+
+.champ-add-bag {
+    width: 100%;
+
+    height: 27px;
+
+    margin-top: 8px;
+
+    background: transparent;
+
+    border: 1px solid rgba(201, 169, 95, 0.55);
+
+    color: #c9a95f;
+
+    font-size: 0.4rem;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.champ-add-bag:hover {
+    background: #c9a95f;
+
+    color: #000;
+}
+
+@media (max-width: 900px) {
+
+    .champ-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .champ-collection {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .champ-products {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px 10px;
+    }
+
+    .champ-heading h2 {
+        font-size: 1.45rem;
+
+        letter-spacing: 0.12em;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .champ-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .champ-quick-view {
+        height: 29px;
+    }
+
+}
+
+/* =========================================
+   CHAMP PRODUCT DETAIL
+========================================= */
+
+.champ-product-detail {
+    display: none;
+
+    background: #050505;
+
+    color: #fff;
+
+    padding: 65px 5vw 80px;
+
+    border-top: 1px solid rgba(201, 169, 95, 0.2);
+}
+
+.champ-product-detail.active {
+    display: block;
+}
+
+
+/* =========================================
+   DETAIL CONTAINER
+========================================= */
+
+.champ-detail-container {
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 38px;
+}
+
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
+.champ-detail-gallery {
+    min-width: 0;
+}
+
+.champ-detail-main {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 0.78;
+
+    overflow: hidden;
+
+    background: #020202;
+}
+
+.champ-detail-main img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.champ-detail-badge {
+    position: absolute;
+
+    top: 8px;
+    left: 8px;
+
+    z-index: 5;
+
+    padding: 4px 7px;
+
+    color: #c9a95f;
+
+    border: 1px solid #c9a95f;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    font-size: 0.4rem;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================
+   THUMBNAILS
+========================================= */
+
+.champ-detail-thumbnails {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.champ-detail-thumb {
+    width: 70px;
+    height: 88px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    cursor: pointer;
+}
+
+.champ-detail-thumb.active {
+    border-color: #c9a95f;
+}
+
+.champ-detail-thumb img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   DETAIL CONTENT
+========================================= */
+
+.champ-detail-content {
+    padding-top: 3px;
+}
+
+.champ-detail-category {
+    color: #c9a95f;
+
+    font-size: 0.45rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.champ-detail-content h1 {
+    margin: 7px 0 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+
+    letter-spacing: 0.08em;
+}
+
+.champ-detail-price {
+    color: #c9a95f;
+
+    font-size: 0.65rem;
+}
+
+.champ-detail-divider {
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    margin: 22px 0;
+}
+
+
+/* =========================================
+   SIZE
+========================================= */
+
+.champ-detail-option {
+    margin-bottom: 20px;
+}
+
+.champ-detail-option label {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.42rem;
+
+    letter-spacing: 0.18em;
+
+    margin-bottom: 8px;
+}
+
+.champ-sizes {
+    display: flex;
+
+    gap: 5px;
+}
+
+.champ-sizes button {
+    width: 34px;
+    height: 30px;
+
+    background: transparent;
+
+    border: 1px solid rgba(201, 169, 95, 0.35);
+
+    color: #fff;
+
+    font-size: 0.45rem;
+
+    cursor: pointer;
+}
+
+.champ-sizes button:hover,
+.champ-sizes button.selected {
+    background: #c9a95f;
+
+    border-color: #c9a95f;
+
+    color: #000;
+}
+
+
+/* =========================================
+   QUANTITY
+========================================= */
+
+.champ-quantity {
+    display: flex;
+
+    width: 95px;
+
+    height: 30px;
+
+    border: 1px solid rgba(201, 169, 95, 0.35);
+}
+
+.champ-quantity button {
+    width: 30px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #c9a95f;
+
+    cursor: pointer;
+}
+
+.champ-quantity span {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.55rem;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.champ-detail-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 38px;
+
+    gap: 5px;
+
+    margin: 28px 0;
+}
+
+.champ-detail-actions button {
+    height: 37px;
+
+    font-size: 0.42rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.champ-detail-bag {
+    background: transparent;
+
+    border: 1px solid #c9a95f;
+
+    color: #c9a95f;
+}
+
+.champ-detail-buy {
+    background: #c9a95f;
+
+    border: 1px solid #c9a95f;
+
+    color: #000;
+}
+
+.champ-detail-heart {
+    background: transparent;
+
+    border: 1px solid #c9a95f;
+
+    color: #c9a95f;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.champ-detail-text {
+    margin-top: 20px;
+}
+
+.champ-detail-text span {
+    display: block;
+
+    color: #c9a95f;
+
+    font-size: 0.42rem;
+
+    letter-spacing: 0.18em;
+
+    margin-bottom: 7px;
+}
+
+.champ-detail-text p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.53);
+
+    font-size: 0.55rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   YOU MAY ALSO LIKE
+========================================= */
+
+.champ-related {
+    border-top: 1px solid rgba(201, 169, 95, 0.16);
+
+    margin-top: 65px;
+
+    padding-top: 42px;
+}
+
+.champ-related-heading {
+    text-align: center;
+
+    margin-bottom: 27px;
+}
+
+.champ-related-heading span {
+    display: block;
+
+    color: #c9a95f;
+
+    font-size: 0.43rem;
+
+    letter-spacing: 0.25em;
+}
+
+.champ-related-heading h2 {
+    margin: 7px 0 11px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.4rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.17em;
+}
+
+.champ-related-heading div {
+    width: 28px;
+
+    height: 1px;
+
+    background: #c9a95f;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   RELATED PRODUCTS
+========================================= */
+
+.champ-related-grid {
+    width: min(100%, 550px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.champ-related-card {
+    min-width: 0;
+}
+
+.champ-related-image {
+    aspect-ratio: 0.72;
+
+    overflow: hidden;
+
+    background: #000;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.champ-related-card:hover .champ-related-image {
+    transform: translateY(-4px);
+
+    border-color: #c9a95f;
+}
+
+.champ-related-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.champ-related-card:hover img {
+    transform: scale(1.06);
+}
+
+.champ-related-category {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #c9a95f;
+
+    font-size: 0.38rem;
+
+    letter-spacing: 0.16em;
+}
+
+.champ-related-card h3 {
+    margin: 4px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.55rem;
+
+    font-weight: 400;
+}
+
+.champ-related-price {
+    color: #c9a95f;
+
+    font-size: 0.43rem;
+}
+
+.champ-related-view {
+    width: 100%;
+
+    height: 25px;
+
+    margin-top: 7px;
+
+    background: transparent;
+
+    border: 1px solid rgba(201, 169, 95, 0.5);
+
+    color: #c9a95f;
+
+    font-size: 0.38rem;
+
+    letter-spacing: 0.16em;
+
+    cursor: pointer;
+}
+
+.champ-related-view:hover {
+    background: #c9a95f;
+
+    color: #000;
+}
+
+
+/* =========================================
+   BACK TO SHOP
+========================================= */
+
+.champ-back-shop {
+    display: block;
+
+    margin: 28px auto 0;
+
+    height: 30px;
+
+    padding: 0 22px;
+
+    background: transparent;
+
+    border: 1px solid #c9a95f;
+
+    color: #c9a95f;
+
+    font-size: 0.4rem;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+}
+
+.champ-back-shop:hover {
+    background: #c9a95f;
+
+    color: #000;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .champ-detail-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .champ-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.collection-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.collection-track {
+    display: flex;
+    gap: 14px;
+
+    width: max-content;
+
+    animation: champSlide 45s linear infinite;
+}
+
+.collection-card {
+    flex: 0 0 210px;
+
+    position: relative;
+    display: block;
+
+    aspect-ratio: 0.78;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    text-decoration: none;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.35s ease,
+        box-shadow 0.45s ease;
+}
+
+/* =========================================================
+   NEW FINDS SECTION
+========================================================= */
+
+.new-finds {
+    position: relative;
+    background: #000;
+    color: #fff;
+    padding: 80px 0 90px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 42px;
+}
+
+.section-header .eyebrow {
+    margin: 0 0 8px;
+
+    color: #c9a95f;
+
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-header .subtitle {
+    margin: 12px auto 0;
+
+    max-width: 500px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.7rem;
+    line-height: 1.8;
+
+    letter-spacing: 0.04em;
+}
+
+.divider {
+    width: 36px;
+    height: 1px;
+
+    background: #c9a95f;
+
+    margin: 18px auto 0;
+}
+
+
+/* =========================================================
+   PRODUCT SLIDER
+========================================================= */
+
+.products-slider {
+    display: flex;
+    gap: 18px;
+
+    width: max-content;
+
+    overflow: visible;
+
+    padding: 10px 0 25px;
+
+    animation: newFindsSlide 55s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* PAUSE WHEN USER HOVERS */
+.products-slider:hover {
+    animation-play-state: paused;
+}
+
+
+/* SLOW CONTINUOUS MOVEMENT */
+@keyframes newFindsSlide {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 9px));
+    }
+
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.products-slider .product-card {
+    position: relative;
+
+    flex: 0 0 230px;
+
+    min-width: 230px;
+
+    background: #050505;
+
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.45s ease;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.products-slider .product-img {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 0.78;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    border: 1px solid rgba(201, 169, 95, 0.12);
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* IMAGE */
+
+.products-slider .product-img img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1);
+
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+/* DARK IMAGE OVERLAY */
+
+.products-slider .product-img::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.02) 55%);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    transition: opacity 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.products-slider .product-card:hover {
+    transform: translateY(-6px);
+
+    z-index: 10;
+}
+
+.products-slider .product-card:hover .product-img {
+    border-color: #c9a95f;
+
+    box-shadow:
+        0 0 0 1px rgba(201, 169, 95, 0.2),
+        0 18px 40px rgba(0, 0, 0, 0.75);
+}
+
+.products-slider .product-card:hover .product-img img {
+    transform: scale(1.07);
+
+    filter: brightness(1.08);
+}
+
+.products-slider .product-card:hover .product-img::after {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   BRAND NEW BADGE
+========================================================= */
+
+.products-slider .badge {
+    position: absolute;
+
+    top: 11px;
+    left: 11px;
+
+    z-index: 5;
+
+    padding: 5px 8px;
+
+    border: 1px solid rgba(201, 169, 95, 0.7);
+
+    background: rgba(0, 0, 0, 0.5);
+
+    color: #c9a95f;
+
+    font-size: 0.43rem;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.products-slider .wishlist {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    z-index: 6;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(201, 169, 95, 0.6);
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: #c9a95f;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.products-slider .wishlist:hover {
+    background: #c9a95f;
+
+    color: #000;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   QUICK ADD
+========================================================= */
+
+.products-slider .quick-add {
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.products-slider .product-card:hover .quick-add {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.products-slider .quick-add button {
+    width: 100%;
+
+    height: 34px;
+
+    border: 1px solid #c9a95f;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    color: #c9a95f;
+
+    font-family: inherit;
+
+    font-size: 0.48rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.products-slider .quick-add button:hover {
+    background: #c9a95f;
+
+    color: #000;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.products-slider .product-info {
+    padding: 12px 2px 0;
+}
+
+.products-slider .product-info .cat {
+    margin: 0 0 5px;
+
+    color: #c9a95f;
+
+    font-size: 0.45rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.products-slider .product-info h5 {
+    margin: 0;
+
+    color: #fff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+}
+
+.products-slider .product-info .price {
+    margin: 7px 0 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.btn-view-all {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 210px;
+
+    padding: 13px 25px;
+
+    border: 1px solid #c9a95f;
+
+    background: transparent;
+
+    color: #c9a95f;
+
+    text-decoration: none;
+
+    font-size: 0.52rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+.btn-view-all:hover {
+    background: #c9a95f;
+
+    color: #000;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(201, 169, 95, 0.18);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .new-finds {
+        padding: 65px 0 75px;
+    }
+
+    .products-slider .product-card {
+        flex-basis: 210px;
+        min-width: 210px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .new-finds {
+        padding: 55px 0 65px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header .subtitle {
+        font-size: 0.62rem;
+
+        padding: 0 15px;
+    }
+
+    .products-slider {
+        gap: 12px;
+
+        padding-left: 2px;
+        padding-right: 15px;
+    }
+
+    .products-slider .product-card {
+        flex-basis: 175px;
+        min-width: 175px;
+    }
+
+    .products-slider .product-info h5 {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .products-slider .product-card {
+        flex-basis: 160px;
+        min-width: 160px;
+    }
+
+    .products-slider .badge {
+        font-size: 0.38rem;
+    }
+
+    .products-slider .wishlist {
+        width: 27px;
+        height: 27px;
+    }
+
+    .products-slider .quick-add {
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+    }
+
+    .products-slider .quick-add button {
+        height: 31px;
+        font-size: 0.43rem;
+    }
+
+}
