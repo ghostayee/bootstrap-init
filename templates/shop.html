@@ -1,0 +1,516 @@
+{% extends "base.html" %} {% block title %}Shop | Champ & Champ Collection{% endblock %} {% block content %}
+
+<section class="shop-page">
+  <div class="shop-header">
+    <p class="shop-eyebrow">The Full Edit</p>
+    <h1>Shop</h1>
+    <p class="shop-subheading">
+      Thrifted treasures and brand new pieces, filtered expertly for you.
+    </p>
+  </div>
+
+  <div class="shop-layout">
+    <aside class="shop-sidebar">
+      <div class="shop-filter-group">
+        <h3>Category</h3>
+        <div class="filter-pills">
+          <button class="filter-pill active" type="button" data-group="category" data-value="ALL">All</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="DRESSES">Dresses</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="TOPS">Tops</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="SKIRTS">Skirts</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="COATS">Coats</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="JACKETS">Blazers &amp; Jackets</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="SETS">Two-Piece Sets</button>
+        </div>
+      </div>
+
+      <div class="shop-filter-group">
+        <h3>Condition</h3>
+        <div class="filter-pills inline">
+          <button class="filter-pill" type="button" data-group="condition" data-value="ALL">All</button>
+          <button class="filter-pill active" type="button" data-group="condition" data-value="THRIFTED">Thrifted</button>
+          <button class="filter-pill" type="button" data-group="condition" data-value="BRAND NEW">Brand New</button>
+        </div>
+      </div>
+
+      <div class="shop-filter-group">
+        <h3>Size</h3>
+        <div class="size-pills">
+          <button type="button" class="active" data-group="size" data-value="ALL">All</button>
+          <button type="button" data-group="size" data-value="XS">XS</button>
+          <button type="button" data-group="size" data-value="S">S</button>
+          <button type="button" data-group="size" data-value="M">M</button>
+          <button type="button" data-group="size" data-value="L">L</button>
+          <button type="button" data-group="size" data-value="XL">XL</button>
+        </div>
+      </div>
+
+      <button class="clear-filters" type="button">Clear all filters</button>
+    </aside>
+
+    <main class="shop-main">
+      <div class="shop-toolbar">
+        <span id="shopCount">0 Pieces</span>
+
+        <div class="shop-sort">
+          <label>Sort</label>
+          <select id="shopSortSelect">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="shopGrid" class="shop-grid"></div>
+    </main>
+  </div>
+
+  <section class="shop-detail-panel" id="shopDetailPanel">
+    <div class="shop-detail-gallery">
+      <div class="shop-detail-main">
+        <span class="shop-detail-badge" id="detailBadge">BRAND NEW</span>
+        <img
+          id="detailImage"
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+          alt="Champagne Slip Dress"
+        />
+      </div>
+
+      <div class="shop-detail-thumbnails" id="detailThumbnails"></div>
+    </div>
+
+    <div class="shop-detail-content">
+      <span class="shop-detail-category" id="detailCategory">DRESSES</span>
+      <h2 id="detailTitle">Champagne Slip Dress</h2>
+      <div class="shop-detail-price" id="detailPrice">KSh 8,500</div>
+      <div class="shop-detail-divider"></div>
+
+      <div class="shop-detail-option">
+        <label>Size</label>
+        <div class="shop-sizes">
+          <button>XS</button>
+          <button class="selected">S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+      </div>
+
+      <div class="shop-detail-option">
+        <label>Quantity</label>
+        <div class="shop-quantity">
+          <button id="detailMinus" type="button">−</button>
+          <span id="detailQuantity">1</span>
+          <button id="detailPlus" type="button">+</button>
+        </div>
+      </div>
+
+      <div class="shop-detail-actions">
+        <button class="shop-detail-bag">Add to Bag</button>
+        <button class="shop-detail-buy">Buy Now</button>
+        <button class="shop-detail-heart" type="button">♡</button>
+      </div>
+
+      <div class="shop-detail-text">
+        <span>Description</span>
+        <p id="detailDescription">
+          A considered piece selected for its fluid drape and elegant finish.
+        </p>
+      </div>
+
+      <div class="shop-detail-text">
+        <span>Material</span>
+        <p id="detailMaterial">Premium fabric with a soft, luxurious finish.</p>
+      </div>
+
+      <div class="shop-detail-text">
+        <span>Condition</span>
+        <p id="detailCondition">Brand new.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="shop-related">
+    <div class="shop-related-heading">
+      <span>Styled Together</span>
+      <h2>You May Also Like</h2>
+      <div class="shop-related-line"></div>
+    </div>
+
+    <div class="shop-related-grid" id="shopRelatedGrid"></div>
+  </div>
+</section>
+
+<script>
+  const products = {
+    champagne: {
+      badge: 'BRAND NEW',
+      category: 'DRESSES',
+      name: 'Champagne Slip Dress',
+      price: 8500,
+      priceLabel: 'KSh 8,500',
+      description: 'A sophisticated champagne slip dress designed with an elegant evening silhouette.',
+      material: 'Premium satin finish with a smooth, fluid drape.',
+      condition: 'Brand new.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    noir: {
+      badge: 'THRIFTED',
+      category: 'DRESSES',
+      name: 'Noir Velvet Gown',
+      price: 14500,
+      priceLabel: 'KSh 14,500',
+      description: 'A dramatic black velvet gown with an elegant evening silhouette.',
+      material: 'Premium velvet with a soft luxurious finish.',
+      condition: 'Thrifted.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    ivory: {
+      badge: 'BRAND NEW',
+      category: 'TOPS',
+      name: 'Ivory Silk Blouse',
+      price: 4200,
+      priceLabel: 'KSh 4,200',
+      description: 'An elegant ivory blouse designed for effortless luxury.',
+      material: 'Premium silk.',
+      condition: 'Brand new.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    camel: {
+      badge: 'THRIFTED',
+      category: 'COATS',
+      name: 'Camel Tailored Coat',
+      price: 16800,
+      priceLabel: 'KSh 16,800',
+      description: 'A beautifully structured camel coat with a timeless tailored silhouette.',
+      material: 'Premium wool blend.',
+      condition: 'Thrifted.',
+      sizes: ['M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    gilded: {
+      badge: 'BRAND NEW',
+      category: 'SKIRTS',
+      name: 'Gilded Pleated Skirt',
+      price: 7200,
+      priceLabel: 'KSh 7,200',
+      description: 'A statement pleated skirt with a refined metallic finish.',
+      material: 'Premium pleated fabric.',
+      condition: 'Brand new.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    sculpted: {
+      badge: 'THRIFTED',
+      category: 'JACKETS',
+      name: 'Sculpted Black Blazer',
+      price: 11200,
+      priceLabel: 'KSh 11,200',
+      description: 'A structured black blazer designed with a sharp contemporary silhouette.',
+      material: 'Premium tailored fabric.',
+      condition: 'Thrifted.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    bronze: {
+      badge: 'BRAND NEW',
+      category: 'SETS',
+      name: 'Bronze Two-Piece Set',
+      price: 12400,
+      priceLabel: 'KSh 12,400',
+      description: 'A luxurious bronze two-piece set designed for a sophisticated statement.',
+      material: 'Premium structured fabric.',
+      condition: 'Brand new.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    }
+  };
+
+  const catalog = Object.entries(products);
+  const state = {
+    category: 'ALL',
+    condition: 'THRIFTED',
+    size: 'ALL',
+    sort: 'featured'
+  };
+
+  const grid = document.getElementById('shopGrid');
+  const detailBadge = document.getElementById('detailBadge');
+  const detailImage = document.getElementById('detailImage');
+  const detailCategory = document.getElementById('detailCategory');
+  const detailTitle = document.getElementById('detailTitle');
+  const detailPrice = document.getElementById('detailPrice');
+  const detailDescription = document.getElementById('detailDescription');
+  const detailMaterial = document.getElementById('detailMaterial');
+  const detailCondition = document.getElementById('detailCondition');
+  const detailThumbnails = document.getElementById('detailThumbnails');
+  const relatedGrid = document.getElementById('shopRelatedGrid');
+  const shopCount = document.getElementById('shopCount');
+  const shopSortSelect = document.getElementById('shopSortSelect');
+
+  function getFilteredProducts() {
+    let items = catalog.map(([key, product]) => ({ key, product }));
+
+    if (state.category !== 'ALL') {
+      items = items.filter(({ product }) => product.category === state.category);
+    }
+
+    if (state.condition !== 'ALL') {
+      items = items.filter(({ product }) => product.badge === state.condition);
+    }
+
+    if (state.size !== 'ALL') {
+      items = items.filter(({ product }) => product.sizes.includes(state.size));
+    }
+
+    switch (state.sort) {
+      case 'low-high':
+        items.sort((a, b) => a.product.price - b.product.price);
+        break;
+      case 'high-low':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      case 'newest':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      default:
+        items = items;
+    }
+
+    return items;
+  }
+
+  function renderProductGrid() {
+    const visibleItems = getFilteredProducts();
+    grid.innerHTML = '';
+    shopCount.textContent = `${visibleItems.length} ${visibleItems.length === 1 ? 'Piece' : 'Pieces'}`;
+
+    if (!visibleItems.length) {
+      grid.innerHTML = '<div class="shop-empty-state">No pieces match your selection.</div>';
+      return;
+    }
+
+    visibleItems.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'shop-card';
+      card.dataset.product = key;
+
+      card.innerHTML = `
+        <div class="shop-card-image">
+          <span class="shop-card-badge">${product.badge}</span>
+          <button class="shop-card-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="shop-card-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="shop-card-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', (event) => {
+        const clicked = event.target.closest('.shop-card-button');
+        if (clicked) {
+          event.stopPropagation();
+        }
+        selectProduct(key);
+      });
+
+      grid.appendChild(card);
+    });
+  }
+
+  function renderThumbnails(product) {
+    detailThumbnails.innerHTML = '';
+
+    product.gallery.forEach((img, index) => {
+      const thumb = document.createElement('button');
+      thumb.type = 'button';
+      thumb.className = 'shop-thumb' + (index === 0 ? ' active' : '');
+      thumb.innerHTML = `<img src="${img}" alt="${product.name} thumbnail ${index + 1}" />`;
+      thumb.addEventListener('click', () => {
+        detailImage.src = img;
+        document.querySelectorAll('.shop-thumb').forEach((item) => item.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      detailThumbnails.appendChild(thumb);
+    });
+  }
+
+  function renderRelated(currentKey) {
+    relatedGrid.innerHTML = '';
+
+    const related = getFilteredProducts().filter(({ key }) => key !== currentKey).slice(0, 3);
+
+    related.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'shop-related-card';
+      card.innerHTML = `
+        <div class="shop-related-media">
+          <span class="shop-related-badge">${product.badge}</span>
+          <button class="shop-related-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="shop-related-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="shop-related-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', () => selectProduct(key));
+      relatedGrid.appendChild(card);
+    });
+  }
+
+  function selectProduct(productKey) {
+    const product = products[productKey];
+    if (!product) return;
+
+    detailBadge.textContent = product.badge;
+    detailCategory.textContent = product.category;
+    detailTitle.textContent = product.name;
+    detailPrice.textContent = product.priceLabel;
+    detailDescription.textContent = product.description;
+    detailMaterial.textContent = product.material;
+    detailCondition.textContent = product.condition;
+    detailImage.src = product.image;
+    detailImage.alt = product.name;
+
+    renderThumbnails(product);
+    renderRelated(productKey);
+
+    const hash = new URLSearchParams(window.location.search);
+    hash.set('product', productKey);
+    window.history.replaceState({}, '', `${window.location.pathname}?${hash.toString()}`);
+
+    document.getElementById('shopDetailPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function bindFilterButtons() {
+    document.querySelectorAll('[data-group]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const { group, value } = button.dataset;
+        const isMultiToggle = group === 'condition';
+
+        if (group === 'category' || group === 'condition') {
+          state[group] = value;
+          document.querySelectorAll(`[data-group="${group}"]`).forEach((item) => {
+            item.classList.toggle('active', item.dataset.value === value);
+          });
+        }
+
+        if (group === 'size') {
+          state.size = value;
+          document.querySelectorAll('[data-group="size"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.value === value);
+          });
+        }
+
+        if (isMultiToggle && value === 'ALL') {
+          state.condition = 'ALL';
+        }
+
+        renderProductGrid();
+        const visible = getFilteredProducts();
+        if (visible.length && !visible.some(({ key }) => key === new URLSearchParams(window.location.search).get('product'))) {
+          selectProduct(visible[0].key);
+        }
+      });
+    });
+
+    document.querySelector('.clear-filters').addEventListener('click', () => {
+      state.category = 'ALL';
+      state.condition = 'THRIFTED';
+      state.size = 'ALL';
+      state.sort = 'featured';
+      shopSortSelect.value = 'featured';
+
+      document.querySelectorAll('[data-group="category"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.value === 'ALL');
+      });
+      document.querySelectorAll('[data-group="condition"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.value === 'THRIFTED');
+      });
+      document.querySelectorAll('[data-group="size"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.value === 'ALL');
+      });
+
+      renderProductGrid();
+      const visible = getFilteredProducts();
+      if (visible.length) {
+        selectProduct(visible[0].key);
+      }
+    });
+
+    shopSortSelect.addEventListener('change', (event) => {
+      state.sort = event.target.value;
+      renderProductGrid();
+      const visible = getFilteredProducts();
+      if (visible.length) {
+        selectProduct(visible[0].key);
+      }
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialProduct = urlParams.get('product') || 'champagne';
+
+  bindFilterButtons();
+  renderProductGrid();
+  selectProduct(initialProduct);
+
+  document.getElementById('detailPlus').addEventListener('click', () => {
+    const qty = document.getElementById('detailQuantity');
+    qty.textContent = Number(qty.textContent) + 1;
+  });
+
+  document.getElementById('detailMinus').addEventListener('click', () => {
+    const qty = document.getElementById('detailQuantity');
+    const current = Number(qty.textContent);
+    qty.textContent = current > 1 ? current - 1 : 1;
+  });
+</script>
+{% endblock %}

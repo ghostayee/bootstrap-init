@@ -8,10 +8,9 @@ def index():
     return render_template("index.html")
 
 
-# Temporary routes so the links don’t break
 @app.route("/shop")
 def shop():
-    return "<h1>Shop page coming soon</h1>"
+    return render_template("shop.html")
 
 
 @app.route("/new-arrivals")
