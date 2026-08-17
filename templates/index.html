@@ -411,250 +411,125 @@ endblock %} {% block content %}
 
     <!-- Product Cards - Horizontal Scroll -->
     <div class="products-slider">
-      <!-- Product Card 1 -->
-      <div class="products-slider">
+      <div class="products-slider-track">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <div class="product-img">
+                <span class="badge">Brand New</span>
 
-    <!-- ================= FIRST SET ================= -->
+                <button class="wishlist">
+                    <i class="bi bi-heart"></i>
+                </button>
 
-    <!-- Product Card 1 -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
+                <img
+                    src="{{ url_for('static', filename='products/dress1.jpg') }}"
+                    alt="Champagne Slip Dress"
+                />
 
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
+                <div class="quick-add">
+                    <a href=""><button>Quick View</button></a>
+                </div>
+            </div>
 
-            <img
-                src="{{ url_for('static', filename='products/dress1.jpg') }}"
-                alt="Champagne Slip Dress"
-            />
-
-            <div class="quick-add">
-                <a href=""><button>Quick View</button></a>
+            <div class="product-info">
+                <p class="cat">Dresses</p>
+                <h5>Champagne Slip Dress</h5>
+                <p class="price">Ksh 8,500</p>
+                <div class="hero-btns">
+                  <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
+                </div>
             </div>
         </div>
 
-        <div class="product-info">
-            <p class="cat">Dresses</p>
-            <h5>Champagne Slip Dress</h5>
-            <p class="price">Ksh 8,500</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <div class="product-img">
+                <span class="badge">Brand New</span>
+
+                <button class="wishlist">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+                <img
+                    src="{{ url_for('static', filename='products/blouse1.jpg') }}"
+                    alt="Ivory Silk Blouse"
+                />
+
+                <div class="quick-add">
+                    <a href=""><button>Quick View</button></a>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <p class="cat">Tops</p>
+                <h5>Ivory Silk Blouse</h5>
+                <p class="price">Ksh 4,200</p>
+                <div class="hero-btns">
+                  <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
+                </div>
             </div>
         </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <div class="product-img">
+                <span class="badge">Brand New</span>
+
+                <button class="wishlist">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+                <img
+                    src="{{ url_for('static', filename='products/pants1.jpg') }}"
+                    alt="Onyx Wide-Leg Trouser"
+                />
+
+                <div class="quick-add">
+                    <button>Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <p class="cat">Pants</p>
+                <h5>Onyx Wide-Leg Trouser</h5>
+                <p class="price">Ksh 6,400</p>
+                <div class="hero-btns">
+                  <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+            <div class="product-img">
+                <span class="badge">Brand New</span>
+
+                <button class="wishlist">
+                    <i class="bi bi-heart"></i>
+                </button>
+
+                <img
+                    src="{{ url_for('static', filename='products/skirt1.jpg') }}"
+                    alt="Gilded Pleated Skirt"
+                />
+
+                <div class="quick-add">
+                    <button>Add to Bag</button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <p class="cat">Skirts</p>
+                <h5>Gilded Pleated Skirt</h5>
+                <p class="price">Ksh 7,200</p>
+                <div class="hero-btns">
+                  <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
+                </div>
+            </div>
+        </div>
+
+      </div>
     </div>
-
-
-    <!-- Product Card 2 -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/blouse1.jpg') }}"
-                alt="Ivory Silk Blouse"
-            />
-
-            <div class="quick-add">
-                <a href=""><button>Quick View</button></a>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Tops</p>
-            <h5>Ivory Silk Blouse</h5>
-            <p class="price">Ksh 4,200</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Product Card 3 -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/pants1.jpg') }}"
-                alt="Onyx Wide-Leg Trouser"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Pants</p>
-            <h5>Onyx Wide-Leg Trouser</h5>
-            <p class="price">Ksh 6,400</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Product Card 4 -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/skirt1.jpg') }}"
-                alt="Gilded Pleated Skirt"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Skirts</p>
-            <h5>Gilded Pleated Skirt</h5>
-            <p class="price">Ksh 7,200</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Card 1 Duplicate -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/dress1.jpg') }}"
-                alt="Champagne Slip Dress"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Dresses</p>
-            <h5>Champagne Slip Dress</h5>
-            <p class="price">Ksh 8,500</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Product Card 2 Duplicate -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/blouse1.jpg') }}"
-                alt="Ivory Silk Blouse"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Tops</p>
-            <h5>Ivory Silk Blouse</h5>
-            <p class="price">Ksh 4,200</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Product Card 3 Duplicate -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/pants1.jpg') }}"
-                alt="Onyx Wide-Leg Trouser"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Pants</p>
-            <h5>Onyx Wide-Leg Trouser</h5>
-            <p class="price">Ksh 6,400</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Product Card 4 Duplicate -->
-    <div class="product-card">
-        <div class="product-img">
-            <span class="badge">Brand New</span>
-
-            <button class="wishlist">
-                <i class="bi bi-heart"></i>
-            </button>
-
-            <img
-                src="{{ url_for('static', filename='products/skirt1.jpg') }}"
-                alt="Gilded Pleated Skirt"
-            />
-
-            <div class="quick-add">
-                <button>Add to Bag</button>
-            </div>
-        </div>
-
-        <div class="product-info">
-            <p class="cat">Skirts</p>
-            <h5>Gilded Pleated Skirt</h5>
-            <p class="price">Ksh 7,200</p>
-            <div class="hero-btns">
-              <a href="{{ url_for('new_arrivals') }}" class="btn-gold">Add To Bag</a>
-            </div>
-        </div>
-    </div>
-</div>
-  </div>
   <div class="text-center mt-5">
     <a href="{{ url_for('new_arrivals') }}" class="btn-view-all">
         View All New Arrivals →
@@ -663,6 +538,27 @@ endblock %} {% block content %}
 </section>
 
 <script>
+  const sliderTrack = document.querySelector('.products-slider-track');
+
+  if (sliderTrack) {
+    const originalCards = Array.from(sliderTrack.children);
+
+    originalCards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      sliderTrack.appendChild(clone);
+    });
+
+    const setSliderShift = () => {
+      const halfWidth = sliderTrack.scrollWidth / 2;
+      sliderTrack.style.setProperty('--slider-shift', `${-halfWidth}px`);
+    };
+
+    setSliderShift();
+    window.addEventListener('load', setSliderShift);
+    window.addEventListener('resize', setSliderShift);
+  }
+
   const champProducts = {
     champagne: {
       badge: "BRAND NEW",
