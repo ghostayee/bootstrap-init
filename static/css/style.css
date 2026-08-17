@@ -826,6 +826,260 @@ footer {
     box-shadow: 0 0 8px rgba(201, 169, 95, 0.5);
 }
 
+.thrifted-feature {
+    background: #050505;
+    padding: 56px 4vw 70px;
+    border-top: 1px solid rgba(201, 169, 95, 0.18);
+    border-bottom: 1px solid rgba(201, 169, 95, 0.18);
+}
+
+.thrifted-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.12fr 1fr;
+    align-items: center;
+    gap: 62px;
+}
+
+.thrifted-media {
+    position: relative;
+    width: min(100%, 560px);
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(201, 169, 95, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(201, 169, 95, 0.08);
+}
+
+.thrifted-media::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border: 1px solid rgba(201, 169, 95, 0.18);
+    pointer-events: none;
+}
+
+.thrifted-media img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1);
+    background: #111;
+}
+
+.thrifted-copy {
+    max-width: 470px;
+    color: #fff;
+}
+
+.thrifted-kicker {
+    margin: 0 0 18px;
+    color: #c9a95f;
+    font-size: 0.54rem;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+}
+
+.thrifted-copy h2 {
+    margin: 0;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.05;
+}
+
+.thrifted-subtitle {
+    margin: 18px 0 18px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    line-height: 1.7;
+}
+
+.thrifted-text {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.72rem;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    max-width: 420px;
+}
+
+.thrifted-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 13px 22px;
+    border: 1px solid rgba(201, 169, 95, 0.8);
+    background: transparent;
+    color: #c9a95f;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.52rem;
+    transition: all 0.3s ease;
+}
+
+.thrifted-btn:hover {
+    background: #c9a95f;
+    color: #050505;
+}
+
+.brand-new-feature {
+    background: #050505;
+    padding: 38px 4vw 80px;
+    border-top: 1px solid rgba(201, 169, 95, 0.18);
+}
+
+.brand-new-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 62px;
+}
+
+.brand-new-copy {
+    max-width: 520px;
+    color: #fff;
+    justify-self: center;
+}
+
+.brand-new-kicker {
+    margin: 0 0 16px;
+    color: #c9a95f;
+    font-size: 0.52rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+}
+
+.brand-new-copy h2 {
+    margin: 0;
+    color: #f5efe6;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.05;
+}
+
+.brand-new-subtitle {
+    margin: 18px 0 18px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.brand-new-divider {
+    width: 42px;
+    height: 1px;
+    background: rgba(201, 169, 95, 0.8);
+    margin: 18px 0 20px;
+}
+
+.brand-new-text {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    max-width: 440px;
+}
+
+.brand-new-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 13px 22px;
+    border: 1px solid rgba(201, 169, 95, 0.8);
+    background: transparent;
+    color: #c9a95f;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.52rem;
+    transition: all 0.3s ease;
+}
+
+.brand-new-btn:hover {
+    background: #c9a95f;
+    color: #050505;
+}
+
+.brand-new-media {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgba(201, 169, 95, 0.18);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: inset 0 0 0 1px rgba(201, 169, 95, 0.08);
+}
+
+.brand-new-media img {
+    display: block;
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+}
+
+@media (max-width: 900px) {
+    .brand-new-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .brand-new-copy {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .brand-new-divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand-new-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand-new-btn {
+        margin: 0 auto;
+    }
+
+    .thrifted-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .thrifted-copy {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .thrifted-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .thrifted-btn {
+        margin: 0 auto;
+    }
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -2245,6 +2499,38 @@ footer {
     font-size: 0.58rem;
 
     letter-spacing: 0.04em;
+}
+
+.products-slider .hero-btns {
+    margin-top: 12px;
+}
+
+.products-slider .hero-btns .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 32px;
+    padding: 9px 12px;
+
+    border: 1px solid rgba(201, 169, 95, 0.55);
+    background: transparent;
+
+    color: #c9a95f;
+
+    font-size: 0.4rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.products-slider .hero-btns .btn-gold:hover {
+    background: #c9a95f;
+    color: #000;
 }
 
 

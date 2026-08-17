@@ -97,6 +97,7 @@ endblock %} {% block content %}
     </a>
   </div>
 </section>
+
 <section class="champ-collection" id="champCollection">
   <div class="champ-heading">
     <span>SIGNATURE PIECES</span>
@@ -485,7 +486,7 @@ endblock %} {% block content %}
                 />
 
                 <div class="quick-add">
-                    <button>Add to Bag</button>
+                    <button>Quick View</button>
                 </div>
             </div>
 
@@ -514,7 +515,7 @@ endblock %} {% block content %}
                 />
 
                 <div class="quick-add">
-                    <button>Add to Bag</button>
+                    <button>Quick View</button>
                 </div>
             </div>
 
@@ -534,6 +535,56 @@ endblock %} {% block content %}
     <a href="{{ url_for('new_arrivals') }}" class="btn-view-all">
         View All New Arrivals →
       </a>
+  </div>
+</section>
+
+<section class="thrifted-feature">
+  <div class="thrifted-inner">
+    <div class="thrifted-media">
+      <img
+        src="{{ url_for('static',filename='images/closet.jpg')}}"
+        alt="Thrifted treasures wardrobe"
+      />
+    </div>
+
+    <div class="thrifted-copy">
+      <p class="thrifted-kicker">Pre-loved, perfectly chosen</p>
+      <h2>Thrifted Treasures</h2>
+      <p class="thrifted-subtitle">
+        Unique pieces. Exceptional finds. Timeless style.
+      </p>
+      <p class="thrifted-text">
+        Every thrifted piece in our collection is hand-selected with care,
+        inspected and loved before it reaches you. Thoughtful styling, standout
+        character, and a story in every stitch.
+      </p>
+      <a href="{{ url_for('thrifted') }}" class="thrifted-btn"
+        >Discover Thrifted Pieces</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="brand-new-feature">
+  <div class="brand-new-inner">
+    <div class="brand-new-copy">
+      <p class="brand-new-kicker">Straight from the atelier</p>
+      <h2>Brand New</h2>
+      <p class="brand-new-subtitle">Contemporary fashion selected for the modern woman.</p>
+      <div class="brand-new-divider"></div>
+      <p class="brand-new-text">
+        Precious tailoring, elevated fabrics and modern silhouettes — new season
+        pieces chosen to effortlessly elevate your wardrobe.
+      </p>
+      <a href="{{ url_for('brand_new') }}" class="brand-new-btn">Shop Brand New</a>
+    </div>
+
+    <div class="brand-new-media">
+      <img
+        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+        alt="Brand new fashion portrait"
+      />
+    </div>
   </div>
 </section>
 
