@@ -23,9 +23,9 @@ def thrifted():
     return render_template("thrifted.html")
 
 
-@app.route("/brand-new")
+@app.route('/brand-new')
 def brand_new():
-    return render_template("brand-new.html")
+    return render_template('brand_new.html')
 
 
 @app.route("/collections")

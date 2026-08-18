@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block title %}Brand New | Champ & Champ
+Collection{% endblock %}
+
+{% block content %}
+
+<!-- ================= BRAND NEW PAGE ================= -->
+<section class="page-header">
+  <div class="container text-center">
+    <p class="eyebrow">Straight from the Atelier</p>
+    <h1>Brand New</h1>
+    <p class="subtitle">Contemporary fashion selected for the modern woman.</p>
+    <div class="divider mx-auto"></div>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="container-fluid px-4 px-lg-5">
+    <!-- Filter / Sort Bar (optional) -->
+    <div class="filter-bar">
+      <div class="left">
+        <span>Showing Brand New Pieces</span>
+      </div>
+      <div class="right">
+        <select class="sort-select">
+          <option>Sort by: Newest</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="brandNewGrid" class="row g-4"></div>
+  </div>
+</section>
+
+<script>
+  const brandNewProducts = [
+    {
+      name: 'Champagne Slip Dress',
+      category: 'Dresses',
+      price: 'Ksh 8,500',
+      image: '{{ url_for("static", filename="products/dress1.jpg") }}',
+      badge: 'Brand New'
+    },
+    {
+      name: 'Ivory Silk Blouse',
+      category: 'Tops',
+      price: 'Ksh 4,200',
+      image: '{{ url_for("static", filename="products/blouse1.jpg") }}',
+      badge: 'Brand New'
+    },
+    {
+      name: 'Onyx Wide-Leg Trouser',
+      category: 'Pants',
+      price: 'Ksh 6,400',
+      image: '{{ url_for("static", filename="products/pants1.jpg") }}',
+      badge: 'Brand New'
+    },
+    {
+      name: 'Gilded Pleated Skirt',
+      category: 'Skirts',
+      price: 'Ksh 7,200',
+      image: '{{ url_for("static", filename="products/skirt1.jpg") }}',
+      badge: 'Brand New'
+    }
+  ];
+
+  function renderBrandNewProducts() {
+    const grid = document.getElementById('brandNewGrid');
+    grid.innerHTML = brandNewProducts.map(product => `
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="badge">${product.badge}</span>
+            <button class="wishlist"><i class="bi bi-heart"></i></button>
+            <img src="${product.image}" alt="${product.name}" />
+            <div class="quick-add">
+              <button>Add to Bag</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="cat">${product.category}</p>
+            <h5>${product.name}</h5>
+            <p class="price">${product.price}</p>
+          </div>
+        </a>
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', renderBrandNewProducts);
+</script>
+
+{% endblock %}

@@ -1,18 +1,25 @@
-{% extends "base.html" %}
-
-{% block title %}About Us | Champ & Champ Collection{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}About Us | Champ Champ Collection{%
+endblock %} {% block content %}
 <div class="about-page">
   <!-- HERO -->
   <div class="about-hero">
     <div class="about-hero-content">
       <p class="about-eyebrow">Our Story</p>
-      <h1>Champ & Champ Collection</h1>
-      <p class="about-hero-text">Luxury fashion for the discerning eye. We believe that true style transcends trends—it's about finding pieces that resonate with your essence and elevate your presence.</p>
+      <h1>
+        Champ Champ<br />
+        <span class="gold">Collection</span>
+      </h1>
+      <p class="about-hero-text">
+        Luxury fashion for the discerning eye. We believe that true style
+        transcends trends—it's about finding pieces that resonate with your
+        essence and elevate your presence.
+      </p>
     </div>
     <div class="about-hero-image">
-      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80" alt="Champ & Champ">
+      <img
+        src="{{ url_for('static', filename='images/jeens.jpg')}}"
+        alt="Champ Champ"
+      />
     </div>
   </div>
 
@@ -21,11 +28,25 @@
     <div class="about-section-content">
       <span class="about-section-label">Our Mission</span>
       <h2>Curated Luxury, Thoughtfully Selected</h2>
-      <p>At Champ & Champ Collection, we're obsessed with the details. Every piece in our collection undergoes rigorous curation—from luxury contemporary designs to carefully sourced vintage treasures. We work directly with premium designers, emerging brands, and trusted suppliers to ensure every item meets our exacting standards.</p>
-      <p>Our mission is simple: to make exceptional fashion accessible. We believe luxury shouldn't mean compromising on quality, ethics, or personal style. Whether you're investing in a timeless classic or discovering a vintage gem, you're choosing pieces with substance.</p>
+      <p>
+        At Champ Champ Collection, we're obsessed with the details. Every piece
+        in our collection undergoes rigorous curation—from luxury contemporary
+        designs to carefully sourced vintage treasures. We work directly with
+        premium designers, emerging brands, and trusted suppliers to ensure
+        every item meets our exacting standards.
+      </p>
+      <p>
+        Our mission is simple: to make exceptional fashion accessible. We
+        believe luxury shouldn't mean compromising on quality, ethics, or
+        personal style. Whether you're investing in a timeless classic or
+        discovering a vintage gem, you're choosing pieces with substance.
+      </p>
     </div>
     <div class="about-section-image">
-      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Mission">
+      <img
+        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"
+        alt="Mission"
+      />
     </div>
   </div>
 
@@ -33,42 +54,60 @@
   <div class="about-values">
     <span class="about-values-label">Our Values</span>
     <h2>What We Stand For</h2>
-    
+
     <div class="values-grid">
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Quality First</h3>
-        <p>We never compromise on craftsmanship, materials, or construction. Every piece tells a story of excellence.</p>
+        <p>
+          We never compromise on craftsmanship, materials, or construction.
+          Every piece tells a story of excellence.
+        </p>
       </div>
-      
+
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Authenticity</h3>
-        <p>Genuine luxury is honest. We're transparent about our sources, pricing, and the stories behind each collection.</p>
+        <p>
+          Genuine luxury is honest. We're transparent about our sources,
+          pricing, and the stories behind each collection.
+        </p>
       </div>
-      
+
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Sustainability</h3>
-        <p>Luxury that lasts. By offering both contemporary investment pieces and curated vintage, we promote conscious consumption.</p>
+        <p>
+          Luxury that lasts. By offering both contemporary investment pieces and
+          curated vintage, we promote conscious consumption.
+        </p>
       </div>
-      
+
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Curation</h3>
-        <p>Less is more. Our carefully curated collections are edited to perfection, never following trends blindly.</p>
+        <p>
+          Less is more. Our carefully curated collections are edited to
+          perfection, never following trends blindly.
+        </p>
       </div>
-      
+
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Accessibility</h3>
-        <p>Luxury fashion for everyone. We offer pieces across price points without compromising on excellence.</p>
+        <p>
+          Luxury fashion for everyone. We offer pieces across price points
+          without compromising on excellence.
+        </p>
       </div>
-      
+
       <div class="value-card">
         <span class="value-icon">✓</span>
         <h3>Community</h3>
-        <p>We're building a community of fashion lovers who appreciate quality, individuality, and timeless style.</p>
+        <p>
+          We're building a community of fashion lovers who appreciate quality,
+          individuality, and timeless style.
+        </p>
       </div>
     </div>
   </div>
@@ -77,33 +116,51 @@
   <div class="about-team">
     <span class="about-team-label">Meet the Team</span>
     <h2>Behind the Collection</h2>
-    
+
     <div class="team-grid">
       <div class="team-member">
         <div class="team-member-image">
-          <img src="{{ url_for('static', filename='images/excecutive/miriam.png') }}" alt="Founder">
+          <img
+            src="{{ url_for('static', filename='images/excecutive/miriam.png') }}"
+            alt="Founder"
+          />
         </div>
         <h3>Juma Miriam</h3>
         <p class="team-role">Founder & Creative Director</p>
-        <p>Fashion historian with 15+ years curating luxury collections. Passionate about finding the perfect piece that transcends seasons.</p>
+        <p>
+          Fashion historian with 15+ years curating luxury collections.
+          Passionate about finding the perfect piece that transcends seasons.
+        </p>
       </div>
-      
+
       <div class="team-member">
         <div class="team-member-image">
-          <img src="{{ url_for('static', filename='images/excecutive/moshu-exce.png')}}" alt="Designer">
+          <img
+            src="{{ url_for('static', filename='images/excecutive/moshu-exce.png')}}"
+            alt="Designer"
+          />
         </div>
         <h3>Moshu Maureen</h3>
         <p class="team-role">Head of Curation</p>
-        <p>Expert eye for quality and style. Travels the globe sourcing the finest contemporary designs and vintage treasures.</p>
+        <p>
+          Expert eye for quality and style. Travels the globe sourcing the
+          finest contemporary designs and vintage treasures.
+        </p>
       </div>
-      
+
       <div class="team-member">
         <div class="team-member-image">
-          <img src="{{ url_for('static', filename='images/excecutive/brenda-khai.png')}}" alt="Experience">
+          <img
+            src="{{ url_for('static', filename='images/excecutive/brenda-khai.png')}}"
+            alt="Experience"
+          />
         </div>
-        <h3>Jordan Lee</h3>
+        <h3>Susan Brenda</h3>
         <p class="team-role">Customer Experience Lead</p>
-        <p>Dedicated to ensuring every customer finds exactly what they're looking for with personalized service and expert styling.</p>
+        <p>
+          Dedicated to ensuring every customer finds exactly what they're
+          looking for with personalized service and expert styling.
+        </p>
       </div>
     </div>
   </div>
@@ -113,7 +170,13 @@
     <div class="about-sustainability-content">
       <span class="about-sustainability-label">Sustainability</span>
       <h2>Fashion with Purpose</h2>
-      <p>We believe luxury fashion has a responsibility. Through our carefully curated collections—particularly our vintage and thrifted sections—we promote a more sustainable approach to fashion. By celebrating timeless pieces and extending the lifecycle of exceptional garments, we contribute to a more conscious future.</p>
+      <p>
+        We believe luxury fashion has a responsibility. Through our carefully
+        curated collections—particularly our vintage and thrifted sections—we
+        promote a more sustainable approach to fashion. By celebrating timeless
+        pieces and extending the lifecycle of exceptional garments, we
+        contribute to a more conscious future.
+      </p>
       <ul>
         <li>Premium quality pieces designed to last generations</li>
         <li>Vintage curation reducing textile waste</li>
@@ -128,403 +191,410 @@
     <h2>Discover Your Next Favorite Piece</h2>
     <p>Browse our collections and find pieces that speak to your style</p>
     <div class="about-cta-buttons">
-      <button onclick="window.location.href='/shop'" class="about-cta-button">Shop All</button>
-      <button onclick="window.location.href='/thrifted'" class="about-cta-button secondary">Explore Vintage</button>
+      <button onclick="window.location.href = '/shop'" class="about-cta-button">
+        Shop All
+      </button>
+      <button
+        onclick="window.location.href = '/thrifted'"
+        class="about-cta-button secondary"
+      >
+        Explore Vintage
+      </button>
     </div>
   </div>
 </div>
 
 <style>
-.about-page {
-  background: #050505;
-  color: #fff;
-}
+  .about-page {
+    background: #050505;
+    color: #fff;
+  }
 
-.about-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 88px 4vw 80px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
+  .about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 88px 4vw 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 
-.about-hero-content {
-  display: flex;
-  flex-direction: column;
-}
+  .about-hero-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-.about-eyebrow {
-  color: #c9a95f;
-  font-size: 0.58rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
+  .about-eyebrow {
+    color: #c9a95f;
+    font-size: 0.58rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
 
-.about-hero h1 {
-  margin: 0 0 20px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 4.2vw, 5rem);
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+  .about-hero h1 {
+    margin: 0 0 20px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4.2vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 
-.about-hero-text {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
-}
+  .about-hero-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+  }
 
-.about-hero-image {
-  position: relative;
-  aspect-ratio: 1 / 1.2;
-  border: 1px solid rgba(201, 169, 95, 0.3);
-  background: #080808;
-  overflow: hidden;
-}
+  .about-hero-image {
+    position: relative;
+    aspect-ratio: 1 / 1.2;
+    border: 1px solid rgba(201, 169, 95, 0.3);
+    background: #080808;
+    overflow: hidden;
+  }
 
-.about-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.92) contrast(1.05);
-}
+  .about-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+  }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 80px 4vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(201, 169, 95, 0.15);
-}
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 80px 4vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(201, 169, 95, 0.15);
+  }
 
-.about-section-content {
-  display: flex;
-  flex-direction: column;
-}
+  .about-section-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-.about-section-label {
-  color: #c9a95f;
-  font-size: 0.56rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
+  .about-section-label {
+    color: #c9a95f;
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
 
-.about-section h2 {
-  margin: 0 0 20px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
+  .about-section h2 {
+    margin: 0 0 20px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
 
-.about-section-content p {
-  margin: 0 0 16px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.75rem;
-  line-height: 1.8;
-}
+  .about-section-content p {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    line-height: 1.8;
+  }
 
-.about-section-content p:last-child {
-  margin-bottom: 0;
-}
+  .about-section-content p:last-child {
+    margin-bottom: 0;
+  }
 
-.about-section-image {
-  position: relative;
-  aspect-ratio: 1.1 / 1;
-  border: 1px solid rgba(201, 169, 95, 0.3);
-  background: #080808;
-  overflow: hidden;
-}
+  .about-section-image {
+    position: relative;
+    aspect-ratio: 1.1 / 1;
+    border: 1px solid rgba(201, 169, 95, 0.3);
+    background: #080808;
+    overflow: hidden;
+  }
 
-.about-section-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.92) contrast(1.05);
-}
+  .about-section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+  }
 
-.about-values {
-  padding: 80px 4vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(201, 169, 95, 0.15);
-  text-align: center;
-}
+  .about-values {
+    padding: 80px 4vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(201, 169, 95, 0.15);
+    text-align: center;
+  }
 
-.about-values-label {
-  color: #c9a95f;
-  font-size: 0.56rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
+  .about-values-label {
+    color: #c9a95f;
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
 
-.about-values h2 {
-  margin: 10px 0 50px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
+  .about-values h2 {
+    margin: 10px 0 50px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
-}
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
 
-.value-card {
-  padding: 28px;
-  border: 1px solid rgba(201, 169, 95, 0.2);
-  background: rgba(201, 169, 95, 0.02);
-  transition: all 0.3s ease;
-}
+  .value-card {
+    padding: 28px;
+    border: 1px solid rgba(201, 169, 95, 0.2);
+    background: rgba(201, 169, 95, 0.02);
+    transition: all 0.3s ease;
+  }
 
-.value-card:hover {
-  border-color: rgba(201, 169, 95, 0.5);
-  background: rgba(201, 169, 95, 0.05);
-}
+  .value-card:hover {
+    border-color: rgba(201, 169, 95, 0.5);
+    background: rgba(201, 169, 95, 0.05);
+  }
 
-.value-icon {
-  display: inline-block;
-  color: #c9a95f;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-}
+  .value-icon {
+    display: inline-block;
+    color: #c9a95f;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
 
-.value-card h3 {
-  margin: 0 0 12px;
-  color: #f3efe9;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
+  .value-card h3 {
+    margin: 0 0 12px;
+    color: #f3efe9;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
 
-.value-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.7rem;
-  line-height: 1.7;
-}
+  .value-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    line-height: 1.7;
+  }
 
-.about-team {
-  padding: 80px 4vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(201, 169, 95, 0.15);
-  text-align: center;
-}
+  .about-team {
+    padding: 80px 4vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(201, 169, 95, 0.15);
+    text-align: center;
+  }
 
-.about-team-label {
-  color: #c9a95f;
-  font-size: 0.56rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
+  .about-team-label {
+    color: #c9a95f;
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
 
-.about-team h2 {
-  margin: 10px 0 50px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
+  .about-team h2 {
+    margin: 10px 0 50px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
-}
-
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.team-member-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgba(201, 169, 95, 0.5);
-  margin-bottom: 20px;
-  background: #080808;
-}
-
-.team-member-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.92) contrast(1.05);
-}
-
-.team-member h3 {
-  margin: 0 0 8px;
-  color: #f3efe9;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.team-role {
-  color: #c9a95f;
-  font-size: 0.56rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.team-member p:last-child {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.7rem;
-  line-height: 1.7;
-}
-
-.about-sustainability {
-  padding: 80px 4vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(201, 169, 95, 0.15);
-}
-
-.about-sustainability-label {
-  color: #c9a95f;
-  font-size: 0.56rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
-.about-sustainability-content h2 {
-  margin: 10px 0 20px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
-
-.about-sustainability-content p {
-  margin: 0 0 20px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.75rem;
-  line-height: 1.8;
-}
-
-.about-sustainability-content ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.about-sustainability-content li {
-  text-align: left;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.7rem;
-  line-height: 1.7;
-  padding-left: 24px;
-  position: relative;
-}
-
-.about-sustainability-content li:before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #c9a95f;
-}
-
-.about-cta {
-  padding: 80px 4vw;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-  border-top: 1px solid rgba(201, 169, 95, 0.15);
-}
-
-.about-cta h2 {
-  margin: 0 0 12px;
-  color: #f3efe9;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
-
-.about-cta p {
-  margin: 0 0 32px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-}
-
-.about-cta-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
-
-.about-cta-button {
-  padding: 14px 36px;
-  border: 1px solid rgba(201, 169, 95, 0.75);
-  background: transparent;
-  color: #c9a95f;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.52rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.about-cta-button:hover,
-.about-cta-button.secondary {
-  background: #c9a95f;
-  color: #000;
-}
-
-.about-cta-button.secondary:hover {
-  background: transparent;
-  color: #c9a95f;
-}
-
-@media (max-width: 1100px) {
-  .about-hero,
-  .about-section,
-  .values-grid,
   .team-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(201, 169, 95, 0.5);
+    margin-bottom: 20px;
+    background: #080808;
+  }
+
+  .team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+  }
+
+  .team-member h3 {
+    margin: 0 0 8px;
+    color: #f3efe9;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .team-role {
+    color: #c9a95f;
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .team-member p:last-child {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    line-height: 1.7;
+  }
+
+  .about-sustainability {
+    padding: 80px 4vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(201, 169, 95, 0.15);
+  }
+
+  .about-sustainability-label {
+    color: #c9a95f;
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  .about-sustainability-content h2 {
+    margin: 10px 0 20px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+
+  .about-sustainability-content p {
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+    line-height: 1.8;
   }
 
   .about-sustainability-content ul {
-    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .about-sustainability-content li {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.7rem;
+    line-height: 1.7;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .about-sustainability-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #c9a95f;
+  }
+
+  .about-cta {
+    padding: 80px 4vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgba(201, 169, 95, 0.15);
+  }
+
+  .about-cta h2 {
+    margin: 0 0 12px;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+
+  .about-cta p {
+    margin: 0 0 32px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
   }
 
   .about-cta-buttons {
-    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
   }
-}
 
-@media (max-width: 768px) {
-  .about-hero,
-  .about-section {
-    padding: 60px 4vw;
-    gap: 24px;
+  .about-cta-button {
+    padding: 14px 36px;
+    border: 1px solid rgba(201, 169, 95, 0.75);
+    background: transparent;
+    color: #c9a95f;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.52rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
-}
+
+  .about-cta-button:hover,
+  .about-cta-button.secondary {
+    background: #c9a95f;
+    color: #000;
+  }
+
+  .about-cta-button.secondary:hover {
+    background: transparent;
+    color: #c9a95f;
+  }
+
+  @media (max-width: 1100px) {
+    .about-hero,
+    .about-section,
+    .values-grid,
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-sustainability-content ul {
+      grid-template-columns: 1fr;
+    }
+
+    .about-cta-buttons {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-hero,
+    .about-section {
+      padding: 60px 4vw;
+      gap: 24px;
+    }
+  }
 </style>
 {% endblock %}
