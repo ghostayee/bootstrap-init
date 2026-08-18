@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+
+{% block title %}Collections | Champ & Champ Collection{% endblock %}
+
+{% block content %}
+<div class="collections-page">
+  <!-- HEADER -->
+  <div class="collections-header">
+    <p class="collections-eyebrow">Curated Collections</p>
+    <h1>Collections</h1>
+    <p class="collections-subheading">Explore our specially curated collections showcasing the finest in contemporary luxury fashion</p>
+  </div>
+
+  <!-- COLLECTIONS GRID -->
+  <div class="collections-grid">
+    <!-- Collection 1: Luxe Minimalist -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1595777707802-221945ffd738?auto=format&fit=crop&w=900&q=80" alt="Luxe Minimalist">
+        <div class="collection-overlay">
+          <span class="collection-badge">Luxe Minimalist</span>
+          <p>Refined elegance through simplicity</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Luxe Minimalist</h2>
+        <p>Clean lines, neutral palettes, and understated sophistication. This collection celebrates the beauty of simplicity with premium fabrics and impeccable tailoring.</p>
+        <div class="collection-stats">
+          <span>24 Pieces</span>
+          <span>6,500 - 28,500 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/shop'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Collection 2: Statement Pieces -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1539533057440-7814baea1106?auto=format&fit=crop&w=900&q=80" alt="Statement Pieces">
+        <div class="collection-overlay">
+          <span class="collection-badge">Statement Pieces</span>
+          <p>Bold, confident luxury</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Statement Pieces</h2>
+        <p>Make an unforgettable entrance. Architectural silhouettes, striking colors, and eye-catching details define this collection of show-stopping garments.</p>
+        <div class="collection-stats">
+          <span>18 Pieces</span>
+          <span>12,000 - 52,000 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/shop'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Collection 3: Heritage Thrifted -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80" alt="Heritage Thrifted">
+        <div class="collection-overlay">
+          <span class="collection-badge">Heritage Thrifted</span>
+          <p>Vintage treasures reimagined</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Heritage Thrifted</h2>
+        <p>Carefully curated vintage pieces with history and character. Each item tells a story of timeless craftsmanship and enduring style.</p>
+        <div class="collection-stats">
+          <span>32 Pieces</span>
+          <span>2,800 - 11,800 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/thrifted'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Collection 4: Contemporary Edge -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1556688905-e815c4753b43?auto=format&fit=crop&w=900&q=80" alt="Contemporary Edge">
+        <div class="collection-overlay">
+          <span class="collection-badge">Contemporary Edge</span>
+          <p>Modern innovation meets luxury</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Contemporary Edge</h2>
+        <p>Where fashion-forward thinking meets exceptional quality. Discover pieces from emerging designers pushing the boundaries of contemporary style.</p>
+        <div class="collection-stats">
+          <span>28 Pieces</span>
+          <span>8,900 - 45,000 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/new-arrivals'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Collection 5: Timeless Classics -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1552062407-291826ab63fd?auto=format&fit=crop&w=900&q=80" alt="Timeless Classics">
+        <div class="collection-overlay">
+          <span class="collection-badge">Timeless Classics</span>
+          <p>Pieces that transcend seasons</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Timeless Classics</h2>
+        <p>Investment pieces designed to last a lifetime. These wardrobe essentials combine perfect proportions with premium materials for enduring elegance.</p>
+        <div class="collection-stats">
+          <span>20 Pieces</span>
+          <span>15,000 - 65,000 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/brand-new'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Collection 6: Seasonal Edit -->
+    <div class="collection-card">
+      <div class="collection-card-image">
+        <img src="https://images.unsplash.com/photo-1567049677904-17134ff3f79b?auto=format&fit=crop&w=900&q=80" alt="Seasonal Edit">
+        <div class="collection-overlay">
+          <span class="collection-badge">Seasonal Edit</span>
+          <p>What's new this season</p>
+        </div>
+      </div>
+      <div class="collection-info">
+        <h2>Seasonal Edit</h2>
+        <p>Our curated selection of the finest pieces for the current season. Handpicked to reflect emerging trends while maintaining our commitment to luxury.</p>
+        <div class="collection-stats">
+          <span>35 Pieces</span>
+          <span>5,000 - 45,000 KSh</span>
+        </div>
+        <button class="collection-button" onclick="window.location.href='/new-arrivals'">Explore</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED COLLECTION -->
+  <div class="featured-collection">
+    <div class="featured-collection-content">
+      <span class="featured-collection-label">Featured This Month</span>
+      <h2>Luxury Athleisure</h2>
+      <p>Elevate your everyday with our latest athleisure collection. Premium fabrics meet sports-inspired silhouettes for effortless sophistication whether you're at the gym or the gallery opening.</p>
+      <button class="featured-collection-button" onclick="window.location.href='/new-arrivals'">Shop Collection</button>
+    </div>
+    <div class="featured-collection-image">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Luxury Athleisure">
+    </div>
+  </div>
+</div>
+
+<style>
+.collections-page {
+  background: #050505;
+  color: #fff;
+  padding: 88px 4vw 80px;
+}
+
+.collections-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.collections-eyebrow {
+  margin: 0 0 10px;
+  color: #c9a95f;
+  font-size: 0.58rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+.collections-header h1 {
+  margin: 0;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 4.2vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.collections-subheading {
+  margin: 12px auto 0;
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+
+.collections-grid {
+  max-width: 1280px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.collection-card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(201, 169, 95, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 169, 95, 0.6);
+}
+
+.collection-card-image {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #080808;
+}
+
+.collection-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.08);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.collection-card:hover .collection-card-image img {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.1);
+}
+
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collection-card:hover .collection-overlay {
+  opacity: 1;
+}
+
+.collection-badge {
+  display: block;
+  color: #c9a95f;
+  font-size: 0.56rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.collection-overlay p {
+  margin: 0;
+  color: #f3efe9;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.collection-info {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-info h2 {
+  margin: 0 0 12px;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.collection-info p {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.65rem;
+  line-height: 1.7;
+}
+
+.collection-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(201, 169, 95, 0.2);
+}
+
+.collection-stats span {
+  color: #c9a95f;
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collection-button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(201, 169, 95, 0.75);
+  background: transparent;
+  color: #c9a95f;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.48rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.collection-button:hover {
+  background: #c9a95f;
+  color: #000;
+}
+
+.featured-collection {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+  border: 1px solid rgba(201, 169, 95, 0.3);
+  background: rgba(201, 169, 95, 0.03);
+}
+
+.featured-collection-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-collection-label {
+  color: #c9a95f;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.featured-collection-content h2 {
+  margin: 0 0 20px;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.featured-collection-content p {
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.featured-collection-button {
+  align-self: flex-start;
+  padding: 14px 32px;
+  border: 1px solid rgba(201, 169, 95, 0.75);
+  background: transparent;
+  color: #c9a95f;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.featured-collection-button:hover {
+  background: #c9a95f;
+  color: #000;
+}
+
+.featured-collection-image {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid rgba(201, 169, 95, 0.4);
+  background: #080808;
+  overflow: hidden;
+}
+
+.featured-collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92) contrast(1.05);
+}
+
+@media (max-width: 1100px) {
+  .collections-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .featured-collection {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-page {
+    padding: 60px 4vw 60px;
+  }
+}
+</style>
+{% endblock %}

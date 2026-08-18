@@ -1,0 +1,586 @@
+{% extends "base.html" %}
+
+{% block title %}New Arrivals | Champ & Champ Collection{% endblock %}
+
+{% block content %}
+
+<section class="new-arrivals-page">
+  <div class="new-arrivals-header">
+    <p class="new-arrivals-eyebrow">Fresh Drop</p>
+    <h1>New Arrivals</h1>
+    <p class="new-arrivals-subheading">
+      Discover the latest additions to our curated collection. Fresh pieces that embody luxury and timeless style.
+    </p>
+  </div>
+
+  <div class="new-arrivals-hero">
+    <div class="new-arrivals-hero-image">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80" alt="New Arrivals Collection" />
+    </div>
+    <div class="new-arrivals-hero-text">
+      <p>
+        Every week, we add carefully selected pieces to our New Arrivals collection. From contemporary designs 
+        to timeless silhouettes, each item is chosen for its quality, craftsmanship, and aesthetic appeal.
+      </p>
+      <p>
+        Whether you're looking for the season's must-haves or investment pieces that transcend trends, 
+        explore our latest drops and elevate your wardrobe.
+      </p>
+    </div>
+  </div>
+
+  <div class="new-arrivals-content">
+    <aside class="new-arrivals-sidebar">
+      <div class="new-arrivals-filter-group">
+        <h3>Category</h3>
+        <div class="new-arrivals-filter-pills">
+          <button class="new-arrivals-filter-pill active" type="button" data-new-group="category" data-new-value="ALL">All</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="category" data-new-value="DRESSES">Dresses</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="category" data-new-value="TOPS">Tops</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="category" data-new-value="BOTTOMS">Bottoms</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="category" data-new-value="OUTERWEAR">Outerwear</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="category" data-new-value="ACCESSORIES">Accessories</button>
+        </div>
+      </div>
+
+      <div class="new-arrivals-filter-group">
+        <h3>Price Range</h3>
+        <div class="new-arrivals-filter-pills inline">
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="price" data-new-value="LOW">Under 5K</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="price" data-new-value="MID">5K - 12K</button>
+          <button class="new-arrivals-filter-pill" type="button" data-new-group="price" data-new-value="HIGH">12K+</button>
+        </div>
+      </div>
+
+      <div class="new-arrivals-filter-group">
+        <h3>Size</h3>
+        <div class="new-arrivals-size-pills">
+          <button type="button" class="active" data-new-group="size" data-new-value="ALL">All</button>
+          <button type="button" data-new-group="size" data-new-value="XS">XS</button>
+          <button type="button" data-new-group="size" data-new-value="S">S</button>
+          <button type="button" data-new-group="size" data-new-value="M">M</button>
+          <button type="button" data-new-group="size" data-new-value="L">L</button>
+          <button type="button" data-new-group="size" data-new-value="XL">XL</button>
+        </div>
+      </div>
+
+      <button class="new-arrivals-clear-filters" type="button">Clear all filters</button>
+    </aside>
+
+    <main class="new-arrivals-main">
+      <div class="new-arrivals-toolbar">
+        <span id="newArrivalsCount">0 Pieces</span>
+
+        <div class="new-arrivals-sort">
+          <label>Sort</label>
+          <select id="newArrivalsSortSelect">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="newArrivalsGrid" class="new-arrivals-grid"></div>
+    </main>
+  </div>
+
+  <section class="new-arrivals-detail-panel" id="newArrivalsDetailPanel">
+    <div class="new-arrivals-detail-gallery">
+      <div class="new-arrivals-detail-main">
+        <span class="new-arrivals-detail-badge" id="newArrivalsDetailBadge">NEW ARRIVAL</span>
+        <img
+          id="newArrivalsDetailImage"
+          src="https://images.unsplash.com/photo-1549887534-f3bda96c3fde?auto=format&fit=crop&w=900&q=80"
+          alt="New Arrival Item"
+        />
+      </div>
+
+      <div class="new-arrivals-detail-thumbnails" id="newArrivalsDetailThumbnails"></div>
+    </div>
+
+    <div class="new-arrivals-detail-content">
+      <span class="new-arrivals-detail-category" id="newArrivalsDetailCategory">DRESSES</span>
+      <h2 id="newArrivalsDetailTitle">Latest Piece</h2>
+      <div class="new-arrivals-detail-price" id="newArrivalsDetailPrice">KSh 8,500</div>
+      <div class="new-arrivals-detail-divider"></div>
+
+      <div class="new-arrivals-detail-option">
+        <label>Size</label>
+        <div class="new-arrivals-sizes">
+          <button>XS</button>
+          <button class="selected">S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+      </div>
+
+      <div class="new-arrivals-detail-option">
+        <label>Quantity</label>
+        <div class="new-arrivals-quantity">
+          <button id="newArrivalsDetailMinus" type="button">−</button>
+          <span id="newArrivalsDetailQuantity">1</span>
+          <button id="newArrivalsDetailPlus" type="button">+</button>
+        </div>
+      </div>
+
+      <div class="new-arrivals-detail-actions">
+        <button class="new-arrivals-detail-bag">Add to Bag</button>
+        <button class="new-arrivals-detail-buy">Buy Now</button>
+        <button class="new-arrivals-detail-heart" type="button">♡</button>
+      </div>
+
+      <div class="new-arrivals-detail-text">
+        <span>Description</span>
+        <p id="newArrivalsDetailDescription">
+          A beautifully crafted piece from our latest collection.
+        </p>
+      </div>
+
+      <div class="new-arrivals-detail-text">
+        <span>Material</span>
+        <p id="newArrivalsDetailMaterial">Premium quality material with exceptional finish.</p>
+      </div>
+
+      <div class="new-arrivals-detail-text">
+        <span>Styling Notes</span>
+        <p id="newArrivalsDetailStyle">Perfect for creating elevated everyday looks.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="new-arrivals-related">
+    <div class="new-arrivals-related-heading">
+      <span>Explore More</span>
+      <h2>More New Pieces</h2>
+      <div class="new-arrivals-related-line"></div>
+    </div>
+
+    <div class="new-arrivals-related-grid" id="newArrivalsRelatedGrid"></div>
+  </div>
+</section>
+
+<script>
+  const newArrivalsProducts = {
+    arrival1: {
+      category: 'DRESSES',
+      name: 'Contemporary Slip Dress',
+      price: 8500,
+      priceLabel: 'KSh 8,500',
+      description: 'A contemporary slip dress with a refined silhouette and fluid movement.',
+      material: 'Premium blend with luxurious drape.',
+      style: 'Perfect for evening events or elevated casual occasions.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1549887534-f3bda96c3fde?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1549887534-f3bda96c3fde?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival2: {
+      category: 'TOPS',
+      name: 'Luxury Linen Top',
+      price: 5200,
+      priceLabel: 'KSh 5,200',
+      description: 'An oversized linen top with a relaxed fit and premium quality.',
+      material: 'Pure linen with a natural texture.',
+      style: 'Pairs effortlessly with any bottom for a minimalist aesthetic.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival3: {
+      category: 'OUTERWEAR',
+      name: 'Statement Blazer',
+      price: 12800,
+      priceLabel: 'KSh 12,800',
+      description: 'A structured statement blazer with contemporary tailoring.',
+      material: 'Premium wool blend with impeccable construction.',
+      style: 'An investment piece that elevates any outfit.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival4: {
+      category: 'BOTTOMS',
+      name: 'Tailored Trousers',
+      price: 7800,
+      priceLabel: 'KSh 7,800',
+      description: 'Impeccably tailored trousers with a modern silhouette.',
+      material: 'Premium wool-blend fabric with a perfect drape.',
+      style: 'A versatile staple that works with everything.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival5: {
+      category: 'DRESSES',
+      name: 'Midi Shirt Dress',
+      price: 9200,
+      priceLabel: 'KSh 9,200',
+      description: 'A sophisticated midi shirt dress with refined detailing.',
+      material: 'Premium cotton-silk blend.',
+      style: 'Wear as a dress or layer over basics for versatility.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival6: {
+      category: 'ACCESSORIES',
+      name: 'Leather Shoulder Bag',
+      price: 10400,
+      priceLabel: 'KSh 10,400',
+      description: 'A structured leather shoulder bag with luxury hardware.',
+      material: 'Italian leather with premium gold-tone hardware.',
+      style: 'A timeless accessory that elevates any ensemble.',
+      sizes: ['ONE SIZE'],
+      image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival7: {
+      category: 'TOPS',
+      name: 'Silk Camisole',
+      price: 4800,
+      priceLabel: 'KSh 4,800',
+      description: 'A delicate silk camisole with luxurious finish.',
+      material: 'Pure silk charmeuse.',
+      style: 'Layer or wear solo for an elegant look.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival8: {
+      category: 'BOTTOMS',
+      name: 'Wide-Leg Jeans',
+      price: 6400,
+      priceLabel: 'KSh 6,400',
+      description: 'Contemporary wide-leg jeans with a perfect fit.',
+      material: 'Premium denim with stretch.',
+      style: 'A modern silhouette that flatters all body types.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival9: {
+      category: 'DRESSES',
+      name: 'Maxi Wrap Dress',
+      price: 11200,
+      priceLabel: 'KSh 11,200',
+      description: 'An elegant wrap maxi dress with flattering proportions.',
+      material: 'Premium crepe blend.',
+      style: 'Perfect for special occasions and elevated styling.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    arrival10: {
+      category: 'OUTERWEAR',
+      name: 'Cashmere Cardigan',
+      price: 14600,
+      priceLabel: 'KSh 14,600',
+      description: 'A luxurious cashmere cardigan with timeless appeal.',
+      material: 'Pure cashmere with superior softness.',
+      style: 'An investment piece for effortless elegance.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    }
+  };
+
+  const newArrivalsCatalog = Object.entries(newArrivalsProducts);
+  const newArrivalsState = {
+    category: 'ALL',
+    price: 'ALL',
+    size: 'ALL',
+    sort: 'featured'
+  };
+
+  const newArrivalsGrid = document.getElementById('newArrivalsGrid');
+  const newArrivalsCount = document.getElementById('newArrivalsCount');
+  const newArrivalsSortSelect = document.getElementById('newArrivalsSortSelect');
+  const newArrivalsDetailPanel = document.getElementById('newArrivalsDetailPanel');
+  const newArrivalsDetailBadge = document.getElementById('newArrivalsDetailBadge');
+  const newArrivalsDetailImage = document.getElementById('newArrivalsDetailImage');
+  const newArrivalsDetailCategory = document.getElementById('newArrivalsDetailCategory');
+  const newArrivalsDetailTitle = document.getElementById('newArrivalsDetailTitle');
+  const newArrivalsDetailPrice = document.getElementById('newArrivalsDetailPrice');
+  const newArrivalsDetailDescription = document.getElementById('newArrivalsDetailDescription');
+  const newArrivalsDetailMaterial = document.getElementById('newArrivalsDetailMaterial');
+  const newArrivalsDetailStyle = document.getElementById('newArrivalsDetailStyle');
+  const newArrivalsDetailThumbnails = document.getElementById('newArrivalsDetailThumbnails');
+  const newArrivalsRelatedGrid = document.getElementById('newArrivalsRelatedGrid');
+
+  function getFilteredNewArrivalsProducts() {
+    let items = newArrivalsCatalog.map(([key, product]) => ({ key, product }));
+
+    if (newArrivalsState.category !== 'ALL') {
+      items = items.filter(({ product }) => product.category === newArrivalsState.category);
+    }
+
+    if (newArrivalsState.size !== 'ALL') {
+      items = items.filter(({ product }) => product.sizes.includes(newArrivalsState.size));
+    }
+
+    if (newArrivalsState.price === 'LOW') {
+      items = items.filter(({ product }) => product.price < 5000);
+    } else if (newArrivalsState.price === 'MID') {
+      items = items.filter(({ product }) => product.price >= 5000 && product.price <= 12000);
+    } else if (newArrivalsState.price === 'HIGH') {
+      items = items.filter(({ product }) => product.price > 12000);
+    }
+
+    switch (newArrivalsState.sort) {
+      case 'price-low':
+        items.sort((a, b) => a.product.price - b.product.price);
+        break;
+      case 'price-high':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      case 'newest':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      default:
+        items = items;
+    }
+
+    return items;
+  }
+
+  function renderNewArrivalsGrid() {
+    const visibleItems = getFilteredNewArrivalsProducts();
+    newArrivalsGrid.innerHTML = '';
+    newArrivalsCount.textContent = `${visibleItems.length} ${visibleItems.length === 1 ? 'Piece' : 'Pieces'}`;
+
+    if (!visibleItems.length) {
+      newArrivalsGrid.innerHTML = '<div class="new-arrivals-empty-state">No pieces match your selection.</div>';
+      return;
+    }
+
+    visibleItems.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'new-arrivals-card';
+      card.dataset.product = key;
+
+      card.innerHTML = `
+        <div class="new-arrivals-card-image">
+          <span class="new-arrivals-card-badge">NEW</span>
+          <button class="new-arrivals-card-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="new-arrivals-card-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="new-arrivals-card-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', (event) => {
+        const clicked = event.target.closest('.new-arrivals-card-button');
+        if (clicked) {
+          event.stopPropagation();
+        }
+        selectNewArrivalsProduct(key);
+      });
+
+      newArrivalsGrid.appendChild(card);
+    });
+  }
+
+  function renderNewArrivalsThumbnails(product) {
+    newArrivalsDetailThumbnails.innerHTML = '';
+
+    product.gallery.forEach((img, index) => {
+      const thumb = document.createElement('button');
+      thumb.type = 'button';
+      thumb.className = 'new-arrivals-thumb' + (index === 0 ? ' active' : '');
+      thumb.innerHTML = `<img src="${img}" alt="${product.name} thumbnail ${index + 1}" />`;
+      thumb.addEventListener('click', () => {
+        newArrivalsDetailImage.src = img;
+        document.querySelectorAll('.new-arrivals-thumb').forEach((item) => item.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      newArrivalsDetailThumbnails.appendChild(thumb);
+    });
+  }
+
+  function renderNewArrivalsRelated(currentKey) {
+    newArrivalsRelatedGrid.innerHTML = '';
+
+    const related = getFilteredNewArrivalsProducts().filter(({ key }) => key !== currentKey).slice(0, 3);
+
+    related.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'new-arrivals-related-card';
+      card.innerHTML = `
+        <div class="new-arrivals-related-media">
+          <span class="new-arrivals-related-badge">NEW</span>
+          <button class="new-arrivals-related-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="new-arrivals-related-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="new-arrivals-related-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', () => selectNewArrivalsProduct(key));
+      newArrivalsRelatedGrid.appendChild(card);
+    });
+  }
+
+  function selectNewArrivalsProduct(productKey, options = {}) {
+    const product = newArrivalsProducts[productKey];
+    if (!product) return;
+
+    newArrivalsDetailBadge.textContent = 'NEW ARRIVAL';
+    newArrivalsDetailCategory.textContent = product.category;
+    newArrivalsDetailTitle.textContent = product.name;
+    newArrivalsDetailPrice.textContent = product.priceLabel;
+    newArrivalsDetailDescription.textContent = product.description;
+    newArrivalsDetailMaterial.textContent = product.material;
+    newArrivalsDetailStyle.textContent = product.style;
+    newArrivalsDetailImage.src = product.image;
+    newArrivalsDetailImage.alt = product.name;
+
+    renderNewArrivalsThumbnails(product);
+    renderNewArrivalsRelated(productKey);
+
+    const hash = new URLSearchParams(window.location.search);
+    hash.set('product', productKey);
+    window.history.replaceState({}, '', `${window.location.pathname}?${hash.toString()}`);
+
+    if (options.scroll !== false) {
+      newArrivalsDetailPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function bindNewArrivalsFilterButtons() {
+    document.querySelectorAll('[data-new-group]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const { newGroup, newValue } = button.dataset;
+
+        if (newGroup === 'category') {
+          newArrivalsState.category = newValue;
+          document.querySelectorAll(`[data-new-group="${newGroup}"]`).forEach((item) => {
+            item.classList.toggle('active', item.dataset.newValue === newValue);
+          });
+        }
+
+        if (newGroup === 'size') {
+          newArrivalsState.size = newValue;
+          document.querySelectorAll('[data-new-group="size"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.newValue === newValue);
+          });
+        }
+
+        if (newGroup === 'price') {
+          newArrivalsState.price = newValue;
+          document.querySelectorAll('[data-new-group="price"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.newValue === newValue);
+          });
+        }
+
+        renderNewArrivalsGrid();
+        const visible = getFilteredNewArrivalsProducts();
+        if (visible.length && !visible.some(({ key }) => key === new URLSearchParams(window.location.search).get('product'))) {
+          selectNewArrivalsProduct(visible[0].key, { scroll: false });
+        }
+      });
+    });
+
+    document.querySelector('.new-arrivals-clear-filters').addEventListener('click', () => {
+      newArrivalsState.category = 'ALL';
+      newArrivalsState.price = 'ALL';
+      newArrivalsState.size = 'ALL';
+      newArrivalsState.sort = 'featured';
+      newArrivalsSortSelect.value = 'featured';
+
+      document.querySelectorAll('[data-new-group="category"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.newValue === 'ALL');
+      });
+      document.querySelectorAll('[data-new-group="price"]').forEach((button) => {
+        button.classList.remove('active');
+      });
+      document.querySelectorAll('[data-new-group="size"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.newValue === 'ALL');
+      });
+
+      renderNewArrivalsGrid();
+      const visible = getFilteredNewArrivalsProducts();
+      if (visible.length) {
+        selectNewArrivalsProduct(visible[0].key, { scroll: false });
+      }
+    });
+
+    newArrivalsSortSelect.addEventListener('change', (event) => {
+      newArrivalsState.sort = event.target.value;
+      renderNewArrivalsGrid();
+      const visible = getFilteredNewArrivalsProducts();
+      if (visible.length) {
+        selectNewArrivalsProduct(visible[0].key, { scroll: false });
+      }
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialProduct = urlParams.get('product') || 'arrival1';
+
+  bindNewArrivalsFilterButtons();
+  renderNewArrivalsGrid();
+  selectNewArrivalsProduct(initialProduct, { scroll: false });
+
+  document.getElementById('newArrivalsDetailPlus').addEventListener('click', () => {
+    const qty = document.getElementById('newArrivalsDetailQuantity');
+    qty.textContent = Number(qty.textContent) + 1;
+  });
+
+  document.getElementById('newArrivalsDetailMinus').addEventListener('click', () => {
+    const qty = document.getElementById('newArrivalsDetailQuantity');
+    const current = Number(qty.textContent);
+    qty.textContent = current > 1 ? current - 1 : 1;
+  });
+</script>
+
+{% endblock %}

@@ -15,7 +15,7 @@ def shop():
 
 @app.route("/new-arrivals")
 def new_arrivals():
-    return "<h1>New Arrivals page coming soon</h1>"
+    return render_template("new-arrivals.html")
 
 
 @app.route("/thrifted")
@@ -25,22 +25,22 @@ def thrifted():
 
 @app.route("/brand-new")
 def brand_new():
-    return "<h1>Brand New page coming soon</h1>"
+    return render_template("brand-new.html")
 
 
 @app.route("/collections")
 def collections():
-    return "<h1>Collections page coming soon</h1>"
+    return render_template("collections.html")
 
 
 @app.route("/about")
 def about():
-    return "<h1>About page coming soon</h1>"
+    return render_template("about.html")
 
 
 @app.route("/contact")
 def contact():
-    return "<h1>Contact page coming soon</h1>"
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":

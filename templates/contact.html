@@ -1,0 +1,545 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us | Champ & Champ Collection{% endblock %}
+
+{% block content %}
+<div class="contact-page">
+  <!-- HEADER -->
+  <div class="contact-header">
+    <p class="contact-eyebrow">Get in Touch</p>
+    <h1>Contact Us</h1>
+    <p class="contact-subheading">Have questions about our collections? Need styling advice? We'd love to hear from you.</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="contact-content">
+    <!-- CONTACT FORM -->
+    <div class="contact-form-wrapper">
+      <h2>Send us a Message</h2>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="product-inquiry">Product Inquiry</option>
+            <option value="styling-advice">Styling Advice</option>
+            <option value="order-issue">Order Issue</option>
+            <option value="returns">Returns & Exchanges</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="button" class="contact-submit" onclick="handleContactSubmit()">Send Message</button>
+        <div id="formMessage" class="form-message" style="display: none;"></div>
+      </form>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info-wrapper">
+      <div class="contact-info-section">
+        <h3>Champ & Champ Collection</h3>
+        
+        <div class="info-block">
+          <span class="info-label">Address</span>
+          <p>Luxury Fashion District<br>Nairobi, Kenya</p>
+        </div>
+
+        <div class="info-block">
+          <span class="info-label">Phone</span>
+          <p><a href="tel:+254700000000">+254 (700) 000-000</a></p>
+        </div>
+
+        <div class="info-block">
+          <span class="info-label">Email</span>
+          <p><a href="mailto:hello@champchamp.com">hello@champchamp.com</a></p>
+        </div>
+
+        <div class="info-block">
+          <span class="info-label">Hours</span>
+          <p>Monday - Friday: 10am - 6pm<br>
+             Saturday: 11am - 5pm<br>
+             Sunday: Closed</p>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="contact-quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/shop">Shop All</a></li>
+          <li><a href="/new-arrivals">New Arrivals</a></li>
+          <li><a href="/thrifted">Thrifted Treasures</a></li>
+          <li><a href="/collections">Collections</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL LINKS -->
+      <div class="contact-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">Instagram</a>
+          <a href="#" class="social-link" title="Pinterest">Pinterest</a>
+          <a href="#" class="social-link" title="Twitter">Twitter</a>
+          <a href="#" class="social-link" title="TikTok">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP SECTION -->
+  <div class="contact-map">
+    <h2>Visit Our Boutique</h2>
+    <div class="map-container">
+      <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Store Location">
+    </div>
+    <p class="map-text">Experience our curated collections in person. Our boutique is designed to offer a luxury shopping experience with personalized styling services.</p>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="contact-faq">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>What's Your Return Policy?</h4>
+        <p>We offer 30-day returns on all items in original condition with tags attached. Visit our Returns page for complete details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do You Offer Styling Services?</h4>
+        <p>Yes! We provide personalized styling consultations. Contact us or book an appointment through our website.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How Often Do You Update Collections?</h4>
+        <p>Our New Arrivals section is updated weekly with fresh pieces. Follow us on social for the latest drops.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Do You Ship Internationally?</h4>
+        <p>Currently, we ship within Kenya. International shipping options coming soon. Contact us for more details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How Do I Authenticate Vintage Items?</h4>
+        <p>All vintage pieces are authenticated by our experts. We provide detailed information about each thrifted item's condition and history.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I Request a Custom Order?</h4>
+        <p>For custom orders and special requests, please reach out to us directly. We'll be happy to discuss your vision.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleContactSubmit() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  const formMessage = document.getElementById('formMessage');
+  
+  if (!name || !email || !message) {
+    formMessage.textContent = 'Please fill in all required fields.';
+    formMessage.className = 'form-message error';
+    formMessage.style.display = 'block';
+    return;
+  }
+  
+  formMessage.textContent = 'Thank you! Your message has been sent. We\'ll respond within 24 hours.';
+  formMessage.className = 'form-message success';
+  formMessage.style.display = 'block';
+  
+  document.getElementById('contactForm').reset();
+  
+  setTimeout(() => {
+    formMessage.style.display = 'none';
+  }, 5000);
+}
+</script>
+
+<style>
+.contact-page {
+  background: #050505;
+  color: #fff;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 88px 4vw 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-eyebrow {
+  margin: 0 0 10px;
+  color: #c9a95f;
+  font-size: 0.58rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+.contact-header h1 {
+  margin: 0;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 4.2vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-subheading {
+  margin: 12px auto 0;
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+
+.contact-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  padding: 0 4vw 80px;
+}
+
+.contact-form-wrapper h2,
+.contact-info-wrapper h3,
+.contact-faq h2 {
+  margin: 0 0 24px;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 169, 95, 0.4);
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(201, 169, 95, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  padding: 14px 36px;
+  margin-top: 8px;
+  border: 1px solid rgba(201, 169, 95, 0.75);
+  background: transparent;
+  color: #c9a95f;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.52rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: #c9a95f;
+  color: #000;
+}
+
+.form-message {
+  padding: 12px 14px;
+  margin-top: 12px;
+  border-left: 3px solid;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.form-message.success {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: #4caf50;
+  color: #81c784;
+}
+
+.form-message.error {
+  background: rgba(244, 67, 54, 0.1);
+  border-color: #f44336;
+  color: #ef5350;
+}
+
+/* CONTACT INFO */
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-info-section h3,
+.contact-quick-links h3,
+.contact-social h3 {
+  margin: 0 0 20px;
+  color: #f3efe9;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.info-block {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(201, 169, 95, 0.15);
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.info-label {
+  display: block;
+  color: #c9a95f;
+  font-size: 0.56rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.info-block p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.info-block a {
+  color: #c9a95f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-block a:hover {
+  color: #f3efe9;
+}
+
+/* QUICK LINKS */
+.contact-quick-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-quick-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.contact-quick-links a:hover {
+  color: #c9a95f;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(201, 169, 95, 0.5);
+  color: #c9a95f;
+  text-decoration: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: #c9a95f;
+  color: #000;
+}
+
+/* MAP SECTION */
+.contact-map {
+  padding: 80px 4vw;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(201, 169, 95, 0.15);
+  text-align: center;
+}
+
+.contact-map h2 {
+  margin: 0 0 30px;
+  color: #f3efe9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.map-container {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 95, 0.3);
+  background: #080808;
+  margin-bottom: 24px;
+}
+
+.map-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.map-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FAQ SECTION */
+.contact-faq {
+  padding: 80px 4vw;
+  max-width: 1280px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(201, 169, 95, 0.15);
+}
+
+.contact-faq h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.faq-item {
+  padding: 24px;
+  border: 1px solid rgba(201, 169, 95, 0.2);
+  background: rgba(201, 169, 95, 0.02);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(201, 169, 95, 0.5);
+  background: rgba(201, 169, 95, 0.05);
+}
+
+.faq-item h4 {
+  margin: 0 0 12px;
+  color: #f3efe9;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.faq-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header,
+  .contact-map,
+  .contact-faq {
+    padding: 60px 4vw;
+  }
+
+  .contact-content {
+    padding: 0 4vw 60px;
+  }
+}
+</style>
+{% endblock %}
