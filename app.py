@@ -20,7 +20,7 @@ def new_arrivals():
 
 @app.route("/thrifted")
 def thrifted():
-    return "<h1>Thrifted page coming soon</h1>"
+    return render_template("thrifted.html")
 
 
 @app.route("/brand-new")

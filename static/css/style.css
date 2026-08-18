@@ -1084,11 +1084,12 @@ footer {
 .shop-page {
     background: #050505;
     color: #fff;
-    padding: 40px 4vw 80px;
+    padding: 88px 4vw 80px;
 }
 
 .shop-header {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 36px;
 }
 
@@ -1607,6 +1608,642 @@ footer {
 .shop-related-media {
     position: relative;
     aspect-ratio: 0.8;
+}
+
+/* =========================================
+   THRIFTED TREASURES PAGE
+========================================= */
+
+.thrifted-collection-page {
+    background: #050505;
+    color: #fff;
+    padding: 88px 4vw 80px;
+}
+
+.thrifted-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.thrifted-eyebrow {
+    margin: 0 0 10px;
+    color: #c9a95f;
+    font-size: 0.58rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+}
+
+.thrifted-header h1 {
+    margin: 0;
+    color: #f3efe9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4.2vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.thrifted-page-subheading {
+    margin: 12px auto 0;
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+}
+
+.thrifted-hero {
+    max-width: 1280px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.thrifted-hero-image {
+    position: relative;
+    aspect-ratio: 1 / 0.8;
+    border: 1px solid rgba(201, 169, 95, 0.3);
+    background: #080808;
+    overflow: hidden;
+}
+
+.thrifted-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+}
+
+.thrifted-hero-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.thrifted-hero-text p {
+    margin: 0 0 18px;
+    font-size: 0.75rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.thrifted-hero-text p:last-child {
+    margin-bottom: 0;
+}
+
+.thrifted-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 40px;
+}
+
+.thrifted-sidebar {
+    padding: 18px 0 0;
+}
+
+.thrifted-filter-group {
+    margin-bottom: 25px;
+}
+
+.thrifted-filter-group h3 {
+    margin: 0 0 12px;
+    color: #c9a95f;
+    font-size: 0.5rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+}
+
+.thrifted-filter-pills,
+.thrifted-size-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.thrifted-filter-pill,
+.thrifted-size-pills button {
+    border: 1px solid rgba(201, 169, 95, 0.42);
+    background: transparent;
+    color: #f4f0eb;
+    padding: 7px 10px;
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.thrifted-filter-pill.active,
+.thrifted-filter-pill:hover,
+.thrifted-size-pills button:hover,
+.thrifted-size-pills button.selected {
+    background: rgba(201, 169, 95, 0.08);
+    border-color: rgba(201, 169, 95, 0.8);
+    color: #c9a95f;
+}
+
+.thrifted-filter-pills.inline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.thrifted-size-pills button {
+    min-width: 38px;
+    padding: 7px 8px;
+}
+
+.thrifted-clear-filters {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid rgba(201, 169, 95, 0.42);
+    background: transparent;
+    color: #c9a95f;
+    padding: 10px 12px;
+    font-size: 0.48rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.thrifted-main {
+    min-width: 0;
+}
+
+.thrifted-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(201, 169, 95, 0.2);
+}
+
+.thrifted-toolbar span {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.56rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.thrifted-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.thrifted-sort label {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.thrifted-sort select {
+    background: #111111;
+    color: #f7f3ee;
+    border: 1px solid rgba(201, 169, 95, 0.6);
+    padding: 9px 12px;
+    min-width: 170px;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.thrifted-sort select option {
+    background: #111111;
+    color: #f7f3ee;
+}
+
+.thrifted-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px 20px;
+}
+
+.thrifted-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(201, 169, 95, 0.2);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+}
+
+.thrifted-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 169, 95, 0.6);
+}
+
+.thrifted-card-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 0.78;
+    border-bottom: 1px solid rgba(201, 169, 95, 0.14);
+}
+
+.thrifted-card-badge,
+.thrifted-related-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(201, 169, 95, 0.8);
+    color: #c9a95f;
+    padding: 5px 7px;
+    font-size: 0.35rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.thrifted-card-wishlist,
+.thrifted-related-wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(201, 169, 95, 0.7);
+    background: rgba(0, 0, 0, 0.45);
+    color: #c9a95f;
+}
+
+.thrifted-card-image img,
+.thrifted-related-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.05);
+}
+
+.thrifted-card-info,
+.thrifted-related-info {
+    padding: 14px 12px 16px;
+}
+
+.thrifted-card-info span,
+.thrifted-related-info span {
+    display: block;
+    color: #c9a95f;
+    font-size: 0.45rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.thrifted-card-info h3,
+.thrifted-related-info h3 {
+    color: #fff;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.thrifted-card-info p,
+.thrifted-related-info p {
+    margin: 10px 0 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+}
+
+.thrifted-card-button,
+.thrifted-related-button,
+.thrifted-detail-bag,
+.thrifted-detail-buy {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(201, 169, 95, 0.75);
+    background: transparent;
+    color: #c9a95f;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.42rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.thrifted-card-button:hover,
+.thrifted-related-button:hover,
+.thrifted-detail-bag:hover,
+.thrifted-detail-buy:hover {
+    background: #c9a95f;
+    color: #000;
+}
+
+.thrifted-detail-panel {
+    max-width: 1280px;
+    margin: 80px auto 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 34px;
+    padding-top: 34px;
+    border-top: 1px solid rgba(201, 169, 95, 0.2);
+}
+
+.thrifted-detail-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.thrifted-detail-main {
+    position: relative;
+    aspect-ratio: 0.82;
+    border: 1px solid rgba(201, 169, 95, 0.5);
+    background: #080808;
+    overflow: hidden;
+}
+
+.thrifted-detail-badge {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(201, 169, 95, 0.8);
+    color: #c9a95f;
+    padding: 6px 10px;
+    font-size: 0.38rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.thrifted-detail-main img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thrifted-detail-thumbnails {
+    display: flex;
+    gap: 12px;
+}
+
+.thrifted-thumb {
+    width: 110px;
+    height: 120px;
+    padding: 0;
+    border: 1px solid rgba(201, 169, 95, 0.4);
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.thrifted-thumb.active {
+    border-color: rgba(201, 169, 95, 1);
+    opacity: 1;
+}
+
+.thrifted-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.thrifted-detail-content {
+    padding-top: 8px;
+}
+
+.thrifted-detail-category {
+    display: block;
+    color: #c9a95f;
+    font-size: 0.5rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.thrifted-detail-content h2 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.thrifted-detail-price {
+    margin-top: 12px;
+    color: #f2ede5;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+}
+
+.thrifted-detail-divider {
+    height: 1px;
+    background: rgba(201, 169, 95, 0.24);
+    margin: 22px 0;
+}
+
+.thrifted-detail-option {
+    margin-bottom: 22px;
+}
+
+.thrifted-detail-option label {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.thrifted-sizes,
+.thrifted-quantity {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.thrifted-sizes button,
+.thrifted-quantity button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(201, 169, 95, 0.45);
+    min-width: 38px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.thrifted-sizes button.selected,
+.thrifted-sizes button:hover,
+.thrifted-quantity button:hover {
+    border-color: rgba(201, 169, 95, 0.9);
+    color: #c9a95f;
+}
+
+.thrifted-quantity span {
+    min-width: 36px;
+    text-align: center;
+    color: #fff;
+}
+
+.thrifted-detail-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.thrifted-detail-bag,
+.thrifted-detail-buy {
+    padding: 12px 10px;
+}
+
+.thrifted-detail-heart {
+    width: 42px;
+    border: 1px solid rgba(201, 169, 95, 0.45);
+    background: transparent;
+    color: #c9a95f;
+    font-size: 1.1rem;
+}
+
+.thrifted-detail-text {
+    margin-bottom: 18px;
+}
+
+.thrifted-detail-text span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c9a95f;
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.thrifted-detail-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.64rem;
+    line-height: 1.8;
+}
+
+.thrifted-related {
+    max-width: 1280px;
+    margin: 80px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(201, 169, 95, 0.2);
+}
+
+.thrifted-related-heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.thrifted-related-heading span {
+    color: #c9a95f;
+    font-size: 0.52rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.thrifted-related-heading h2 {
+    margin: 14px 0 0;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.thrifted-related-line {
+    width: 42px;
+    height: 1px;
+    background: rgba(201, 169, 95, 0.7);
+    margin: 14px auto 0;
+}
+
+.thrifted-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.thrifted-related-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(201, 169, 95, 0.2);
+    cursor: pointer;
+}
+
+.thrifted-related-media {
+    position: relative;
+    aspect-ratio: 0.8;
+}
+
+.thrifted-empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1100px) {
+    .thrifted-content {
+        grid-template-columns: 1fr;
+    }
+
+    .thrifted-sidebar {
+        order: 2;
+    }
+
+    .thrifted-main {
+        order: 1;
+    }
+
+    .thrifted-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .thrifted-detail-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .thrifted-hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thrifted-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .thrifted-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thrifted-detail-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .thrifted-detail-heart {
+        grid-column: span 2;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .thrifted-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thrifted-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 1100px) {

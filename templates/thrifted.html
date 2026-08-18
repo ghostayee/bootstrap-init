@@ -1,0 +1,586 @@
+{% extends "base.html" %}
+
+{% block title %}Thrifted Treasures | Champ & Champ Collection{% endblock %}
+
+{% block content %}
+
+<section class="thrifted-collection-page">
+  <div class="thrifted-header">
+    <p class="thrifted-eyebrow">Premium Selection</p>
+    <h1>Thrifted Treasures</h1>
+    <p class="thrifted-page-subheading">
+      Thoughtfully curated pieces with soul. Each item selected for its quality, style, and timeless appeal.
+    </p>
+  </div>
+
+  <div class="thrifted-hero">
+    <div class="thrifted-hero-image">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80" alt="Thrifted Collection" />
+    </div>
+    <div class="thrifted-hero-text">
+      <p>
+        Our thrifted edit celebrates the beauty of pre-loved fashion. From vintage denim to designer silhouettes, 
+        we've selected pieces that transcend trends and deserve a second life with you.
+      </p>
+      <p>
+        Every thrifted piece is inspected for quality and authenticity, ensuring you receive a garment that's 
+        both distinctive and durable.
+      </p>
+    </div>
+  </div>
+
+  <div class="thrifted-content">
+    <aside class="thrifted-sidebar">
+      <div class="thrifted-filter-group">
+        <h3>Category</h3>
+        <div class="thrifted-filter-pills">
+          <button class="thrifted-filter-pill active" type="button" data-thrift-group="category" data-thrift-value="ALL">All</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="category" data-thrift-value="DRESSES">Dresses</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="category" data-thrift-value="TOPS">Tops</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="category" data-thrift-value="BOTTOMS">Bottoms</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="category" data-thrift-value="OUTERWEAR">Outerwear</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="category" data-thrift-value="ACCESSORIES">Accessories</button>
+        </div>
+      </div>
+
+      <div class="thrifted-filter-group">
+        <h3>Price Range</h3>
+        <div class="thrifted-filter-pills inline">
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="price" data-thrift-value="LOW">Under 5K</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="price" data-thrift-value="MID">5K - 12K</button>
+          <button class="thrifted-filter-pill" type="button" data-thrift-group="price" data-thrift-value="HIGH">12K+</button>
+        </div>
+      </div>
+
+      <div class="thrifted-filter-group">
+        <h3>Size</h3>
+        <div class="thrifted-size-pills">
+          <button type="button" class="active" data-thrift-group="size" data-thrift-value="ALL">All</button>
+          <button type="button" data-thrift-group="size" data-thrift-value="XS">XS</button>
+          <button type="button" data-thrift-group="size" data-thrift-value="S">S</button>
+          <button type="button" data-thrift-group="size" data-thrift-value="M">M</button>
+          <button type="button" data-thrift-group="size" data-thrift-value="L">L</button>
+          <button type="button" data-thrift-group="size" data-thrift-value="XL">XL</button>
+        </div>
+      </div>
+
+      <button class="thrifted-clear-filters" type="button">Clear all filters</button>
+    </aside>
+
+    <main class="thrifted-main">
+      <div class="thrifted-toolbar">
+        <span id="thriftedCount">0 Pieces</span>
+
+        <div class="thrifted-sort">
+          <label>Sort</label>
+          <select id="thriftedSortSelect">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="thriftedGrid" class="thrifted-grid"></div>
+    </main>
+  </div>
+
+  <section class="thrifted-detail-panel" id="thriftedDetailPanel">
+    <div class="thrifted-detail-gallery">
+      <div class="thrifted-detail-main">
+        <span class="thrifted-detail-badge" id="thriftedDetailBadge">THRIFTED</span>
+        <img
+          id="thriftedDetailImage"
+          src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80"
+          alt="Thrifted Item"
+        />
+      </div>
+
+      <div class="thrifted-detail-thumbnails" id="thriftedDetailThumbnails"></div>
+    </div>
+
+    <div class="thrifted-detail-content">
+      <span class="thrifted-detail-category" id="thriftedDetailCategory">DRESSES</span>
+      <h2 id="thriftedDetailTitle">Vintage Thrifted Piece</h2>
+      <div class="thrifted-detail-price" id="thriftedDetailPrice">KSh 7,500</div>
+      <div class="thrifted-detail-divider"></div>
+
+      <div class="thrifted-detail-option">
+        <label>Size</label>
+        <div class="thrifted-sizes">
+          <button>XS</button>
+          <button class="selected">S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+      </div>
+
+      <div class="thrifted-detail-option">
+        <label>Quantity</label>
+        <div class="thrifted-quantity">
+          <button id="thriftedDetailMinus" type="button">−</button>
+          <span id="thriftedDetailQuantity">1</span>
+          <button id="thriftedDetailPlus" type="button">+</button>
+        </div>
+      </div>
+
+      <div class="thrifted-detail-actions">
+        <button class="thrifted-detail-bag">Add to Bag</button>
+        <button class="thrifted-detail-buy">Buy Now</button>
+        <button class="thrifted-detail-heart" type="button">♡</button>
+      </div>
+
+      <div class="thrifted-detail-text">
+        <span>Description</span>
+        <p id="thriftedDetailDescription">
+          A vintage thrifted piece with character and quality.
+        </p>
+      </div>
+
+      <div class="thrifted-detail-text">
+        <span>Condition</span>
+        <p id="thriftedDetailCondition">Excellent condition. Pre-loved.</p>
+      </div>
+
+      <div class="thrifted-detail-text">
+        <span>Style Notes</span>
+        <p id="thriftedDetailStyle">Perfect for styling with contemporary pieces for an elevated vintage aesthetic.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="thrifted-related">
+    <div class="thrifted-related-heading">
+      <span>Explore More</span>
+      <h2>More Treasures</h2>
+      <div class="thrifted-related-line"></div>
+    </div>
+
+    <div class="thrifted-related-grid" id="thriftedRelatedGrid"></div>
+  </div>
+</section>
+
+<script>
+  const thriftedProducts = {
+    vintage1: {
+      category: 'DRESSES',
+      name: 'Vintage Slip Dress',
+      price: 6800,
+      priceLabel: 'KSh 6,800',
+      description: 'A classic slip dress with delicate straps and fluid drape.',
+      condition: 'Excellent condition.',
+      style: 'Perfect solo or layered with contemporary silhouettes.',
+      sizes: ['XS', 'S', 'M'],
+      image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage2: {
+      category: 'TOPS',
+      name: 'Thrifted Linen Shirt',
+      price: 4200,
+      priceLabel: 'KSh 4,200',
+      description: 'A quality linen shirt with a relaxed fit and timeless appeal.',
+      condition: 'Great condition. Minimal wear.',
+      style: 'Excellent for casual or smart-casual styling.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage3: {
+      category: 'OUTERWEAR',
+      name: 'Wool Blend Coat',
+      price: 9800,
+      priceLabel: 'KSh 9,800',
+      description: 'A structured wool blend coat with elegant tailoring.',
+      condition: 'Excellent condition. Professionally cleaned.',
+      style: 'A timeless piece that works with any wardrobe.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage4: {
+      category: 'BOTTOMS',
+      name: 'Vintage Denim',
+      price: 5200,
+      priceLabel: 'KSh 5,200',
+      description: 'Classic denim with a soft fade and timeless silhouette.',
+      condition: 'Good condition. Authentic vintage.',
+      style: 'Perfect for styling with anything from tees to blouses.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage5: {
+      category: 'DRESSES',
+      name: 'Midi Dress',
+      price: 7800,
+      priceLabel: 'KSh 7,800',
+      description: 'A graceful midi dress with subtle detailing.',
+      condition: 'Excellent condition.',
+      style: 'Dress it up or down with ease.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage6: {
+      category: 'ACCESSORIES',
+      name: 'Vintage Leather Belt',
+      price: 2800,
+      priceLabel: 'KSh 2,800',
+      description: 'A quality leather belt that adds character to any outfit.',
+      condition: 'Good condition. Shows authentic wear.',
+      style: 'A versatile accessory with vintage charm.',
+      sizes: ['ONE SIZE'],
+      image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage7: {
+      category: 'TOPS',
+      name: 'Thrifted Silk Camisole',
+      price: 3800,
+      priceLabel: 'KSh 3,800',
+      description: 'A delicate silk camisole with luxe finish.',
+      condition: 'Excellent condition.',
+      style: 'Wear layered or as a standalone piece.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage8: {
+      category: 'OUTERWEAR',
+      name: 'Vintage Blazer',
+      price: 8400,
+      priceLabel: 'KSh 8,400',
+      description: 'A structured blazer with sharp tailoring.',
+      condition: 'Excellent condition.',
+      style: 'A sophisticated piece perfect for layering.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage9: {
+      category: 'BOTTOMS',
+      name: 'Wool Trousers',
+      price: 6200,
+      priceLabel: 'KSh 6,200',
+      description: 'Classic wool trousers with a tailored fit.',
+      condition: 'Excellent condition.',
+      style: 'Effortlessly chic with any top.',
+      sizes: ['S', 'M', 'L', 'XL'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    vintage10: {
+      category: 'DRESSES',
+      name: 'Cocktail Dress',
+      price: 11800,
+      priceLabel: 'KSh 11,800',
+      description: 'An elegant cocktail dress with sophisticated details.',
+      condition: 'Excellent condition.',
+      style: 'Perfect for special occasions.',
+      sizes: ['XS', 'S', 'M'],
+      image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    }
+  };
+
+  const thriftedCatalog = Object.entries(thriftedProducts);
+  const thriftedState = {
+    category: 'ALL',
+    price: 'ALL',
+    size: 'ALL',
+    sort: 'featured'
+  };
+
+  const thriftedGrid = document.getElementById('thriftedGrid');
+  const thriftedCount = document.getElementById('thriftedCount');
+  const thriftedSortSelect = document.getElementById('thriftedSortSelect');
+  const thriftedDetailPanel = document.getElementById('thriftedDetailPanel');
+  const thriftedDetailBadge = document.getElementById('thriftedDetailBadge');
+  const thriftedDetailImage = document.getElementById('thriftedDetailImage');
+  const thriftedDetailCategory = document.getElementById('thriftedDetailCategory');
+  const thriftedDetailTitle = document.getElementById('thriftedDetailTitle');
+  const thriftedDetailPrice = document.getElementById('thriftedDetailPrice');
+  const thriftedDetailDescription = document.getElementById('thriftedDetailDescription');
+  const thriftedDetailCondition = document.getElementById('thriftedDetailCondition');
+  const thriftedDetailStyle = document.getElementById('thriftedDetailStyle');
+  const thriftedDetailThumbnails = document.getElementById('thriftedDetailThumbnails');
+  const thriftedRelatedGrid = document.getElementById('thriftedRelatedGrid');
+
+  function getFilteredThriftedProducts() {
+    let items = thriftedCatalog.map(([key, product]) => ({ key, product }));
+
+    if (thriftedState.category !== 'ALL') {
+      items = items.filter(({ product }) => product.category === thriftedState.category);
+    }
+
+    if (thriftedState.size !== 'ALL') {
+      items = items.filter(({ product }) => product.sizes.includes(thriftedState.size));
+    }
+
+    if (thriftedState.price === 'LOW') {
+      items = items.filter(({ product }) => product.price < 5000);
+    } else if (thriftedState.price === 'MID') {
+      items = items.filter(({ product }) => product.price >= 5000 && product.price <= 12000);
+    } else if (thriftedState.price === 'HIGH') {
+      items = items.filter(({ product }) => product.price > 12000);
+    }
+
+    switch (thriftedState.sort) {
+      case 'price-low':
+        items.sort((a, b) => a.product.price - b.product.price);
+        break;
+      case 'price-high':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      case 'newest':
+        items.sort((a, b) => b.product.price - a.product.price);
+        break;
+      default:
+        items = items;
+    }
+
+    return items;
+  }
+
+  function renderThriftedGrid() {
+    const visibleItems = getFilteredThriftedProducts();
+    thriftedGrid.innerHTML = '';
+    thriftedCount.textContent = `${visibleItems.length} ${visibleItems.length === 1 ? 'Piece' : 'Pieces'}`;
+
+    if (!visibleItems.length) {
+      thriftedGrid.innerHTML = '<div class="thrifted-empty-state">No pieces match your selection.</div>';
+      return;
+    }
+
+    visibleItems.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'thrifted-card';
+      card.dataset.product = key;
+
+      card.innerHTML = `
+        <div class="thrifted-card-image">
+          <span class="thrifted-card-badge">THRIFTED</span>
+          <button class="thrifted-card-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="thrifted-card-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="thrifted-card-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', (event) => {
+        const clicked = event.target.closest('.thrifted-card-button');
+        if (clicked) {
+          event.stopPropagation();
+        }
+        selectThriftedProduct(key);
+      });
+
+      thriftedGrid.appendChild(card);
+    });
+  }
+
+  function renderThriftedThumbnails(product) {
+    thriftedDetailThumbnails.innerHTML = '';
+
+    product.gallery.forEach((img, index) => {
+      const thumb = document.createElement('button');
+      thumb.type = 'button';
+      thumb.className = 'thrifted-thumb' + (index === 0 ? ' active' : '');
+      thumb.innerHTML = `<img src="${img}" alt="${product.name} thumbnail ${index + 1}" />`;
+      thumb.addEventListener('click', () => {
+        thriftedDetailImage.src = img;
+        document.querySelectorAll('.thrifted-thumb').forEach((item) => item.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      thriftedDetailThumbnails.appendChild(thumb);
+    });
+  }
+
+  function renderThriftedRelated(currentKey) {
+    thriftedRelatedGrid.innerHTML = '';
+
+    const related = getFilteredThriftedProducts().filter(({ key }) => key !== currentKey).slice(0, 3);
+
+    related.forEach(({ key, product }) => {
+      const card = document.createElement('article');
+      card.className = 'thrifted-related-card';
+      card.innerHTML = `
+        <div class="thrifted-related-media">
+          <span class="thrifted-related-badge">THRIFTED</span>
+          <button class="thrifted-related-wishlist" type="button">♡</button>
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="thrifted-related-info">
+          <span>${product.category}</span>
+          <h3>${product.name}</h3>
+          <p>${product.priceLabel}</p>
+          <button class="thrifted-related-button" type="button">Add to Bag</button>
+        </div>
+      `;
+
+      card.addEventListener('click', () => selectThriftedProduct(key));
+      thriftedRelatedGrid.appendChild(card);
+    });
+  }
+
+  function selectThriftedProduct(productKey, options = {}) {
+    const product = thriftedProducts[productKey];
+    if (!product) return;
+
+    thriftedDetailBadge.textContent = 'THRIFTED';
+    thriftedDetailCategory.textContent = product.category;
+    thriftedDetailTitle.textContent = product.name;
+    thriftedDetailPrice.textContent = product.priceLabel;
+    thriftedDetailDescription.textContent = product.description;
+    thriftedDetailCondition.textContent = product.condition;
+    thriftedDetailStyle.textContent = product.style;
+    thriftedDetailImage.src = product.image;
+    thriftedDetailImage.alt = product.name;
+
+    renderThriftedThumbnails(product);
+    renderThriftedRelated(productKey);
+
+    const hash = new URLSearchParams(window.location.search);
+    hash.set('product', productKey);
+    window.history.replaceState({}, '', `${window.location.pathname}?${hash.toString()}`);
+
+    if (options.scroll !== false) {
+      thriftedDetailPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function bindThriftedFilterButtons() {
+    document.querySelectorAll('[data-thrift-group]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const { thriftGroup, thriftValue } = button.dataset;
+
+        if (thriftGroup === 'category') {
+          thriftedState.category = thriftValue;
+          document.querySelectorAll(`[data-thrift-group="${thriftGroup}"]`).forEach((item) => {
+            item.classList.toggle('active', item.dataset.thriftValue === thriftValue);
+          });
+        }
+
+        if (thriftGroup === 'size') {
+          thriftedState.size = thriftValue;
+          document.querySelectorAll('[data-thrift-group="size"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.thriftValue === thriftValue);
+          });
+        }
+
+        if (thriftGroup === 'price') {
+          thriftedState.price = thriftValue;
+          document.querySelectorAll('[data-thrift-group="price"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.thriftValue === thriftValue);
+          });
+        }
+
+        renderThriftedGrid();
+        const visible = getFilteredThriftedProducts();
+        if (visible.length && !visible.some(({ key }) => key === new URLSearchParams(window.location.search).get('product'))) {
+          selectThriftedProduct(visible[0].key, { scroll: false });
+        }
+      });
+    });
+
+    document.querySelector('.thrifted-clear-filters').addEventListener('click', () => {
+      thriftedState.category = 'ALL';
+      thriftedState.price = 'ALL';
+      thriftedState.size = 'ALL';
+      thriftedState.sort = 'featured';
+      thriftedSortSelect.value = 'featured';
+
+      document.querySelectorAll('[data-thrift-group="category"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.thriftValue === 'ALL');
+      });
+      document.querySelectorAll('[data-thrift-group="price"]').forEach((button) => {
+        button.classList.remove('active');
+      });
+      document.querySelectorAll('[data-thrift-group="size"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.thriftValue === 'ALL');
+      });
+
+      renderThriftedGrid();
+      const visible = getFilteredThriftedProducts();
+      if (visible.length) {
+        selectThriftedProduct(visible[0].key, { scroll: false });
+      }
+    });
+
+    thriftedSortSelect.addEventListener('change', (event) => {
+      thriftedState.sort = event.target.value;
+      renderThriftedGrid();
+      const visible = getFilteredThriftedProducts();
+      if (visible.length) {
+        selectThriftedProduct(visible[0].key, { scroll: false });
+      }
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialProduct = urlParams.get('product') || 'vintage1';
+
+  bindThriftedFilterButtons();
+  renderThriftedGrid();
+  selectThriftedProduct(initialProduct, { scroll: false });
+
+  document.getElementById('thriftedDetailPlus').addEventListener('click', () => {
+    const qty = document.getElementById('thriftedDetailQuantity');
+    qty.textContent = Number(qty.textContent) + 1;
+  });
+
+  document.getElementById('thriftedDetailMinus').addEventListener('click', () => {
+    const qty = document.getElementById('thriftedDetailQuantity');
+    const current = Number(qty.textContent);
+    qty.textContent = current > 1 ? current - 1 : 1;
+  });
+</script>
+
+{% endblock %}

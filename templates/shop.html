@@ -17,18 +17,24 @@
           <button class="filter-pill active" type="button" data-group="category" data-value="ALL">All</button>
           <button class="filter-pill" type="button" data-group="category" data-value="DRESSES">Dresses</button>
           <button class="filter-pill" type="button" data-group="category" data-value="TOPS">Tops</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="PANTS">Pants</button>
           <button class="filter-pill" type="button" data-group="category" data-value="SKIRTS">Skirts</button>
-          <button class="filter-pill" type="button" data-group="category" data-value="COATS">Coats</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="JEANS">Jeans</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="JUMPSUITS">Jumpsuits</button>
           <button class="filter-pill" type="button" data-group="category" data-value="JACKETS">Blazers &amp; Jackets</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="COATS">Coats</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="SHORTS">Shorts</button>
           <button class="filter-pill" type="button" data-group="category" data-value="SETS">Two-Piece Sets</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="LINGERIE">Lingerie &amp; Intimates</button>
+          <button class="filter-pill" type="button" data-group="category" data-value="ACCESSORIES">Accessories</button>
         </div>
       </div>
 
       <div class="shop-filter-group">
         <h3>Condition</h3>
         <div class="filter-pills inline">
-          <button class="filter-pill" type="button" data-group="condition" data-value="ALL">All</button>
-          <button class="filter-pill active" type="button" data-group="condition" data-value="THRIFTED">Thrifted</button>
+          <button class="filter-pill active" type="button" data-group="condition" data-value="ALL">All</button>
+          <button class="filter-pill" type="button" data-group="condition" data-value="THRIFTED">Thrifted</button>
           <button class="filter-pill" type="button" data-group="condition" data-value="BRAND NEW">Brand New</button>
         </div>
       </div>
@@ -42,6 +48,14 @@
           <button type="button" data-group="size" data-value="M">M</button>
           <button type="button" data-group="size" data-value="L">L</button>
           <button type="button" data-group="size" data-value="XL">XL</button>
+        </div>
+      </div>
+
+      <div class="shop-filter-group">
+        <h3>Price</h3>
+        <div class="filter-pills inline">
+          <button class="filter-pill" type="button" data-group="price" data-value="LOW_HIGH">Low to High</button>
+          <button class="filter-pill" type="button" data-group="price" data-value="HIGH_LOW">High to Low</button>
         </div>
       </div>
 
@@ -263,14 +277,134 @@
         'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
         'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
       ]
+    },
+    velvet: {
+      badge: 'THRIFTED',
+      category: 'PANTS',
+      name: 'Velvet Wide-Leg Trouser',
+      price: 9600,
+      priceLabel: 'KSh 9,600',
+      description: 'A soft velvet trouser with elongated lines and a tailored waist.',
+      material: 'Soft-touch velvet blend.',
+      condition: 'Thrifted.',
+      sizes: ['XS', 'S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    ember: {
+      badge: 'BRAND NEW',
+      category: 'JUMPSUITS',
+      name: 'Ember Utility Jumpsuit',
+      price: 13200,
+      priceLabel: 'KSh 13,200',
+      description: 'A sleek utility jumpsuit cut for easy movement and elevated styling.',
+      material: 'Premium stretch twill.',
+      condition: 'Brand new.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    bloom: {
+      badge: 'THRIFTED',
+      category: 'ACCESSORIES',
+      name: 'Bloom Silk Scarf',
+      price: 3200,
+      priceLabel: 'KSh 3,200',
+      description: 'A statement silk scarf designed to add polish to any look.',
+      material: 'Silk blend.',
+      condition: 'Thrifted.',
+      sizes: ['ONE SIZE'],
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    mist: {
+      badge: 'BRAND NEW',
+      category: 'SHORTS',
+      name: 'Mist Tailored Shorts',
+      price: 5800,
+      priceLabel: 'KSh 5,800',
+      description: 'Tailored shorts in a soft neutral tone for polished warm-weather layering.',
+      material: 'Premium cotton blend.',
+      condition: 'Brand new.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    denim: {
+      badge: 'THRIFTED',
+      category: 'JEANS',
+      name: 'Midnight Denim Straight',
+      price: 6400,
+      priceLabel: 'KSh 6,400',
+      description: 'A timeless denim staple with a soft fade and a tailored, everyday silhouette.',
+      material: 'Premium stretch denim.',
+      condition: 'Thrifted.',
+      sizes: ['S', 'M', 'L'],
+      image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    satin: {
+      badge: 'BRAND NEW',
+      category: 'LINGERIE',
+      name: 'Satin Lace Set',
+      price: 5100,
+      priceLabel: 'KSh 5,100',
+      description: 'Delicate satin layers with lace detailing for elevated everyday luxury.',
+      material: 'Silk satin blend with lace trims.',
+      condition: 'Brand new.',
+      sizes: ['XS', 'S', 'M'],
+      image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'
+      ]
+    },
+    pearl: {
+      badge: 'BRAND NEW',
+      category: 'ACCESSORIES',
+      name: 'Pearl Statement Bag',
+      price: 8900,
+      priceLabel: 'KSh 8,900',
+      description: 'A chic structured bag with a sculptural finish and luxury hardware.',
+      material: 'Premium vegan leather with pearl accents.',
+      condition: 'Brand new.',
+      sizes: ['ONE SIZE'],
+      image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
+        'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      ]
     }
   };
 
   const catalog = Object.entries(products);
   const state = {
     category: 'ALL',
-    condition: 'THRIFTED',
+    condition: 'ALL',
     size: 'ALL',
+    price: 'ALL',
     sort: 'featured'
   };
 
@@ -301,6 +435,12 @@
 
     if (state.size !== 'ALL') {
       items = items.filter(({ product }) => product.sizes.includes(state.size));
+    }
+
+    if (state.price === 'LOW_HIGH') {
+      items.sort((a, b) => a.product.price - b.product.price);
+    } else if (state.price === 'HIGH_LOW') {
+      items.sort((a, b) => b.product.price - a.product.price);
     }
 
     switch (state.sort) {
@@ -405,7 +545,7 @@
     });
   }
 
-  function selectProduct(productKey) {
+  function selectProduct(productKey, options = {}) {
     const product = products[productKey];
     if (!product) return;
 
@@ -426,14 +566,15 @@
     hash.set('product', productKey);
     window.history.replaceState({}, '', `${window.location.pathname}?${hash.toString()}`);
 
-    document.getElementById('shopDetailPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (options.scroll !== false) {
+      document.getElementById('shopDetailPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   function bindFilterButtons() {
     document.querySelectorAll('[data-group]').forEach((button) => {
       button.addEventListener('click', () => {
         const { group, value } = button.dataset;
-        const isMultiToggle = group === 'condition';
 
         if (group === 'category' || group === 'condition') {
           state[group] = value;
@@ -449,22 +590,28 @@
           });
         }
 
-        if (isMultiToggle && value === 'ALL') {
-          state.condition = 'ALL';
+        if (group === 'price') {
+          state.price = value;
+          state.sort = value === 'LOW_HIGH' ? 'low-high' : 'high-low';
+          shopSortSelect.value = state.sort;
+          document.querySelectorAll('[data-group="price"]').forEach((item) => {
+            item.classList.toggle('active', item.dataset.value === value);
+          });
         }
 
         renderProductGrid();
         const visible = getFilteredProducts();
         if (visible.length && !visible.some(({ key }) => key === new URLSearchParams(window.location.search).get('product'))) {
-          selectProduct(visible[0].key);
+          selectProduct(visible[0].key, { scroll: false });
         }
       });
     });
 
     document.querySelector('.clear-filters').addEventListener('click', () => {
       state.category = 'ALL';
-      state.condition = 'THRIFTED';
+      state.condition = 'ALL';
       state.size = 'ALL';
+      state.price = 'ALL';
       state.sort = 'featured';
       shopSortSelect.value = 'featured';
 
@@ -472,25 +619,32 @@
         button.classList.toggle('active', button.dataset.value === 'ALL');
       });
       document.querySelectorAll('[data-group="condition"]').forEach((button) => {
-        button.classList.toggle('active', button.dataset.value === 'THRIFTED');
+        button.classList.toggle('active', button.dataset.value === 'ALL');
       });
       document.querySelectorAll('[data-group="size"]').forEach((button) => {
         button.classList.toggle('active', button.dataset.value === 'ALL');
+      });
+      document.querySelectorAll('[data-group="price"]').forEach((button) => {
+        button.classList.remove('active');
       });
 
       renderProductGrid();
       const visible = getFilteredProducts();
       if (visible.length) {
-        selectProduct(visible[0].key);
+        selectProduct(visible[0].key, { scroll: false });
       }
     });
 
     shopSortSelect.addEventListener('change', (event) => {
       state.sort = event.target.value;
+      state.price = event.target.value === 'low-high' ? 'LOW_HIGH' : event.target.value === 'high-low' ? 'HIGH_LOW' : 'ALL';
+      document.querySelectorAll('[data-group="price"]').forEach((button) => {
+        button.classList.toggle('active', button.dataset.value === state.price);
+      });
       renderProductGrid();
       const visible = getFilteredProducts();
       if (visible.length) {
-        selectProduct(visible[0].key);
+        selectProduct(visible[0].key, { scroll: false });
       }
     });
   }
@@ -500,7 +654,7 @@
 
   bindFilterButtons();
   renderProductGrid();
-  selectProduct(initialProduct);
+  selectProduct(initialProduct, { scroll: false });
 
   document.getElementById('detailPlus').addEventListener('click', () => {
     const qty = document.getElementById('detailQuantity');
